@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap3 %}
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static "favicon.ico" %}">
+    <title>{% block title %}Wharton Shoutouts{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+    <!-- Bootstrap Styles -->
+    {% bootstrap_css %}
+     <!-- Custom Styles -->
+    <link href="{% static "scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "scss/compiled_css/custom.css" %}" rel="stylesheet" type="text/css">
+    <!-- Place modernizer.js inside <head> -->
+    <script src="{% static "js/vendor/modernizr.min.js" %}"></script>
+    <!--[if lt IE 9]>
+    <script src="{% static "js/vendor/respond.min.js" %}"></script>
+    <![endif]-->
+    {% block extra_head_bottom %}{% endblock %}
+  </head>
+<body>
+  <!--[if lt IE 7]>
+   <p class="browsehappy">You are using an <strong>outdated</strong> browser. 
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> 
+    to improve your experience.
+  </p>
+  <![endif]-->  
+  <header id="header" role="heading">
+{% block header %}
+<h2 class="visuallyhidden">Header</h2>
+<div id="top-nav" role="navigation">
+ <h2 class="visuallyhidden">Top Navigation</h2>
+ <div class="container">
+   <div class="row">
+     <ul class="nav navbar-nav navbar-left">
+       <div id="top-red-bar">&nbsp;</div>
+     </ul>
+     <ul class="nav navbar-nav navbar-right">
+     <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown">QuickLinks <span class="caret"></span></a>
+       <ul class="dropdown-menu" role="menu">
+         <li><a href="http://www.wharton.upenn.edu/undergrad/">Undergraduate Program</a></li>
+         <li><a href="http://www.wharton.upenn.edu/mba/">MBA Program</a></li>
+         <li><a href="http://www.wharton.upenn.edu/mbaexecutive/">MBA Program For Executives</a></li>
+         <li><a href="http://www.wharton.upenn.edu/doctoral/">Doctoral Programs</a></li>
+         <li><a href="http://executiveeducation.wharton.upenn.edu/">Executive Education</a></li>
+         <li class="divider"></li>
+         <li><a href="http://www.wharton.upenn.edu/academics/academics.cfm/">Prospective Students</a></li>
+         <li><a href="http://www.wharton.upenn.edu/alumni/">Alumni</a></li>
+         <li><a href="http://www.wharton.upenn.edu/recruiters_corporations/index.cfm">Recruiters and Corporations</a></li>
+         <li><a href="https://inside.wharton.upenn.edu/">Faculty & Staff</a></li>
+         <li class="divider"></li>
+         <li><a href="http://knowledge.wharton.upenn.edu/">Knowledge@Wharton</a></li>
+       </ul>
+     </li>
+     <li><a href="http://news.wharton.upenn.edu/">News</a></li>
+     <li><a href="http://www.wharton.upenn.edu/contact-us-directories.cfm">Contact us</a></li>
+     <li class="dropdown">
+       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Campuses <span class="caret"></span></a>
+       <ul class="dropdown-menu" role="menu">
+         <li><a href="http://www.wharton.upenn.edu/locations/philadelphia-campus.cfm">Philadelpha</a></li>
+         <li><a href="http://www.wharton.upenn.edu/sanfrancisco/">San Francisco</a></li>
+       </ul>
+     </li>
+     <li><a href="http://www.wharton.upenn.edu/">Wharton Home</a></li>
+     <li><a href="http://www.upenn.edu/">Penn</a></li>
+     <li id="glyph-search"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+     <div id="search">
+       <div class="input-group">
+         <input type="text" value="Search Wharton" class="form-control">
+         <span class="input-group-btn">
+         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
+         </span>
+       </div>
+     </div>
+   </div>
+   <!--/ end row -->
+ </div>
+ <!--/ end container -->
+</div>
+<!-- end top-nav -->
+<div id="banner" role="banner">
+ <h2 class="visuallyhidden">Banner</h2>
+ <div class="container">
+   <div class="row">
+     <img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo">
+     <div id="title">Wharton Computing</div>
+   </div>
+   <!--/ end row -->
+ </div>
+ <!--/ end container -->
+</div>
+<!--/ end banner -->
+<nav class="navbar navbar-inverse main-nav" role="navigation">
+ <h2 class="visuallyhidden">Main Navigation</h2>
+ <div class="container">
+   <div class="row">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       </button>
+       <a class="navbar-brand visuallyhidden" href="#">Starter Kit</a>
+       <div id="top-left-container"></div>
+     </div>
+     <div class="collapse navbar-collapse">
+       <ul class="nav navbar-nav navbar-right">
+         <li><a href="#">Item 1</a></li>
+         <li><a href="#">Item 2</a></li>
+         <li><a href="#">Item 3</a></li>
+         <li class="active"><a href="#">Active Item 4</a></li>
+         <!--- This will need to be adjusted based on the layout you end up choosing --->
+         <ul class="mobile-sm">
+           <li><a href="#">Sidebar Menu Starts Here</a></li>
+           <li class="active"><a href="#">Active Item 1</a></li>
+           <li><a href="#">Item 3</a></li>
+           <li><a href="#">Item 4</a></li>
+           <li><a href="#">Item 5</a></li>
+         </ul>
+         <li><a href="#">Item 5</a></li>
+         <li><a href="#">Item 6</a></li>
+       </ul>
+     </div>
+     <!--/ end nav-collapse -->
+     <div id="search-option"><a href="#"><span class="glyphicon glyphicon-search"></span></a></div>
+     <div id="search">
+       <div class="input-group">
+         <input type="text" value="Search Wharton" class="form-control">
+         <span class="input-group-btn">
+         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
+         </span>
+       </div>
+       <!-- /end input-group -->
+     </div>
+   </div>
+ </div>
+ <!-- /end container -->
+</nav>
+<!-- /end main-nav -->
+<div id="breadcrumb">
+ <h2 class="visuallyhidden">Breadcrumbs</h2>
+ <div class="container">
+   <div class="row">
+     <ol class="breadcrumb">
+       <li><a href="#">Crumb Parent</a></li>
+       <li class="active">Crumb Child</li>
+     </ol>
+   </div>
+ </div>
+</div>
+ {% endblock header %}
+  </header><!-- /end header -->
+ 
+ {% block content_wrapper %}
+ <main id="content" role="main">
+   {% block content %}{% endblock %}
+ </main><!--/ end main content -->
+ {% endblock content_wrapper %}
+  
+ <footer id="footer">
+ {% block footer %}
+	<div class="container">
+	 <div class="row">
+	   <div class="col-md-2">
+	     <h5>WRDS Classroom Tools</h5>
+	     <ul>
+	       <li><a href="http://executivemba.wharton.upenn.edu/">Home</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/admissions/">Admissions</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/the-experience/">The Experience</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/financing-your-mba/">Financing Your MBA</a></li>
+	     </ul>
+	   </div>
+	   <div class="col-md-3">
+	     <h5>&nbsp;</h5>
+	     <ul>
+	       <li><a href="http://executivemba.wharton.upenn.edu/program-details/">Program Details</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/academics/">Academics</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/your-career/">Your Career</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/admissions/applying-deadlines/">Apply</a></li>
+	     </ul>
+	   </div>
+	   <div class="col-md-2 wharton">
+	     <h5>Wharton</h5>
+	     <ul>
+	       <li><a href="http://www.wharton.upenn.edu/">Home</a></li>
+	       <li><a href="http://news.wharton.upenn.edu/">News</a></li>
+	       <li><a href="http://www.wharton.upenn.edu/contact-us-directories.cfm">Contact Wharton</a></li>
+	       <li><a href="http://www.wharton.upenn.edu/locations/locations.cfm">Locations</a></li>
+	     </ul>
+	   </div>
+	   <div class="col-md-3">
+	     <h5>Featured Links</h5>
+	     <ul>
+	       <li><a href="http://executivemba.wharton.upenn.edu/events">Attend an Admissions Event</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/blog/">Read our Blog</a></li>
+	       <li><a href="http://executivemba.wharton.upenn.edu/admissions/contact-us/">Contact Wharton Executive MBA</a></li>
+	     </ul>
+	   </div>
+	   <div class="col-md-2 social">
+	     <ul class="social-icons">
+	       <li class="facebook-icon"><a href="https://www.facebook.com/whartonexecutiveMBA"><img src="{% static "img/social/facebook-icon.png" %}" width="29" height="29" alt="Facebook"></a></li>
+	       <li class="twitter-icon"><a href="https://twitter.com/wharton_emba"><img src="{% static "img/social/twitter-icon.png" %}" width="29" height="29" alt="Twitter"></a></li>
+	       <li class="googleplus-icon"><a href="https://plus.google.com/u/0/102787439244205864419/posts"><img src="{% static "img/social/googleplus-icon.png" %}" width="29" height="29" alt="Google+"></a></li>
+	       <li class="youtube-icon"><a href="https://www.youtube.com/user/WhartonExecutiveMBA"><img src="{% static "img/social/youtube-icon.png" %}" width="29" height="29" alt="YouTube"></a></li>
+	       <li class="flickr-icon"><a href="https://www.flickr.com/photos/whartonexecutivemba/"><img src="{% static "img/social/flickr-icon.png" %}" width="29" height="29" alt="Flickr"></a></li>
+	     </ul>
+	     <!-- .social-icons -->
+	     <div id="knowledge">
+	       <a href="http://www.wharton.upenn.edu/about/knowledge-for-action.cfm">
+	       <img src="{% static "img/footer/knowledge-for.png" %}"/>
+	       </a>
+	     </div>
+	   </div>
+	 </div><!--/ end row -->
+	 <div class="col-md-2 wharton mobile">
+	   <ul>
+	     <li><a href="#">Home</a></li>
+	     <li><a href="#">News</a></li>
+	     <li><a href="#">Contact Wharton</a></li>
+	     <li><a href="#">Locations</a></li>
+	   </ul>
+	 </div>
+	 <div class="row copyright">
+	   <a href="http://upenn.edu"><img src="{% static "img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
+	   <p>&copy; 2014 <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a><span class="mba">|<a href="http://executivemba.wharton.upenn.edu/">Wharton Executive MBA</a></span></p>
+	 </div>
+	</div><!--/ end container -->
+	{% endblock footer %}
+  </footer>
+  
+  {% block footer_js %}
+  <!-- Core JS
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="{% static "js/vendor/jquery.min.js" %}"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/plugins.js" %}"></script>
+  <script src="{% static "js/custom.js" %}"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
+  {% endblock %}
+  {% block extra_footer_js %}{% endblock %}
+</body>
+</html>

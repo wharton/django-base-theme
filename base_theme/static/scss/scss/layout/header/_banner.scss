@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Banner styles
+   ========================================================================== */
+
+#banner {
+	.container {
+		@include linear-gradient(#0d2c68,#2e55a4);
+		padding-bottom: 20px;
+	}
+	#logo {
+		margin-top: 25px;
+		float: left;
+	}
+	#title {
+		float: left;
+		padding-left: 35px;
+		padding-top: 37px;
+		color: #fff;
+		font-family: $bask;
+		text-transform: uppercase;
+		@include font-size(20px);
+		@include small {
+			@include font-size(13px);
+		}
+	}
+} 

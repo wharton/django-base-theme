@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Breadcrumb styles
+   ========================================================================== */
+
+#breadcrumb {
+	.container {
+		background-color: #f5f5f5;
+	}
+	.breadcrumb {
+		margin-bottom:0px;
+		padding-left: 0px;
+		@include font-size(15px);
+	}
+	.breadcrumb > li+li:before {
+			color: #999;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			padding-right: 10px;
+			@include font-size(1px);
+			@include glyph("\e080");
+	}
+}
+
+#breadcrumb {
+	ol li:first-child {
+		text-transform: uppercase;
+		a {
+			font-family: $bask;
+		}
+	}
+	a {
+		color: #aaa;
+		&:hover, &:focus {
+			color: $red;
+		}
+	}
+	.active {
+		@include font-size(13px);
+	}
+}

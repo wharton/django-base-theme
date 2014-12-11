@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Example Sticky Footer (to be customized as needed)
+   ========================================================================== */
+html,
+body {
+height: 100%;
+}
+main {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -60px;
+}
+#push, #footer {
+	height: 60px;
+}
+#footer {
+  background-color: #f5f5f5;
+}

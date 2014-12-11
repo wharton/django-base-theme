@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible for this website & technology
+
+# TEAM
+
+    Wharton Computing & Information Technology
+
+# PROJECT INFO
+
+    Title: Django Base Theme
+    Version: 1.0
+    Components/Standards: HTML5, CSS3, SASS/SCSS, Twitter Bootstrap, HTML5 Boilerplate, Normalize.css, jQuery, Modernizr, respond.js

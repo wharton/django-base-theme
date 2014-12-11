@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Main Nav Styles
+   ========================================================================== */
+
+.main-nav {
+	&.navbar-inverse .navbar-nav > .active > a {
+		background: none;
+		border-top: 3px solid $red;
+		@include small {
+			border-top: 0px;
+			}
+	}
+}
+
+.main-nav {
+	min-height: 0px;
+	margin-bottom: 0px;
+	.container {
+		height: 28px;
+		background: url('../../../static/img/bg/bg-MainNav.jpg') bottom center;
+		display: block;
+		background-color: #2e55a4;
+		@include small {
+			background: none;
+			background-color: #002c77;
+			height: 100%;
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+	}
+}
+
+.main-nav {
+		&.navbar-inverse {
+		background: none;
+		border: 0px;
+			li a {
+				padding-top: 4px;
+				padding-bottom: 4px;
+				padding-left: 15px;
+				font-family: $lato;
+				font-weight: 300;
+				@include font-size(14px);
+				color: #fff;
+				border-left: 1px solid #6b87b8;
+				border-right: 1px solid #244b8e;
+				@include small {
+					border: 0px;
+					padding-sleft: 10px;
+				}
+				@include transition(all .4s ease 0s);
+				&:hover, &:focus {
+					background-color: $red;
+				}
+	  }
+	  li.active a {
+		  padding-top: 1px;
+		  &:hover, &:focus {
+			  background-color: $red;
+		  }
+	  }
+	}
+}
+
+#search {
+	position: absolute;
+	top: 24px;
+	right: 0px;
+	.input-group {
+		padding: 10px 15px;
+		width: 250px;
+		background-color: #2b2b2b;
+		@include border-radius(5px);
+	}
+	.input-group-btn:last-child > .btn, 
+	.input-group-btn:last-child > .btn-group {
+		margin-left: 0px;
+	}
+	.input-group-btn {
+		.btn {
+			border-color: $red;
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}
+
+.main-nav {
+	#search-option {
+			display: none;
+	}
+	#search {
+		background-color: #2b2b2b;
+		position: relative;
+		top: 0px;
+		left: 0px;
+		.input-group {
+			width: 100%;
+		}
+	}
+}
+
+#glyph-search {
+	background-color: #2b2b2b;
+	.glyphicon-search {
+		color: #eee;
+	}
+}
+
+ul.mobile-sm {
+	display: none;
+	padding-left: 0px;
+	background-color: #e8e8e8;
+	@include small {
+		display: block;
+		li {
+			background-color: #e8e8e8;
+			border-bottom: 1px solid #fff;
+			cursor: pointer;
+			&.active {
+				background-color: #d5d3d4 !important;
+			}
+			&:hover, &:focus {
+					background-color: #f5f5f5 !important;
+			}
+			a {
+				padding-left: 30px !important;
+				color: #425cb3 !important;
+				&:hover, &:focus {
+					background: none !important;
+					color: #000 !important;
+				}
+			}
+		}
+	}
+}

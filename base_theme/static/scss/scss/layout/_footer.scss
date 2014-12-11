@@ -1,0 +1,164 @@
+#footer {
+	.container {
+		@include linear-gradient(#2e55a4,#0d2c68);
+		min-height: 300px;
+		height: 100%;
+	}
+	.col-md-3, .col-md-2 {
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 20px;
+	}
+}
+
+#footer {
+	ul {
+		padding-left: 0px;
+	}
+	li {
+		list-style-type: none;
+		@include font-size(12px);
+		padding-bottom: 15px;
+		font-family: $lato;
+	}
+}
+	
+#footer #knowledge {
+	img {
+		width: 90%;
+		height: auto;
+		padding-right: 10px;
+		padding-top: 20px;
+	}
+}
+
+#footer {
+	a {
+	  color: #f5f5f5;
+		text-decoration: none;
+		&:hover {
+			color: #ccc;
+		}
+	}
+	h5 {
+		text-transform: uppercase;
+		color: #A2B1D6;
+		font-weight: normal;
+		@include font-size(13px);
+	}
+}
+
+#footer	{
+	.social {
+		padding-top: 30px;
+	}
+	.social-icons {
+	  img {
+		  @include large {
+			  width: 23px;
+			  height: auto;
+		  }
+		  @include small {
+			  width: auto;
+		  }
+	  }
+		li {
+		float: left;
+		padding-right: 7px;
+		@include medium {
+			padding-right: 15px;
+		}
+	}
+	
+	}
+}
+
+#footer {
+	@include medium {
+	  .container {
+		  min-height: 200px;
+	  }
+	  .row {
+		  padding: 0px 0px;
+	  }  
+	  #knowledge img,
+	  .mba,
+	  .col-md-2, 
+	  .col-md-3 {
+		  display: none;
+	  }
+	  .social {
+		  display: block;
+		  padding-left: 18px;
+	  }	
+	  .copyright {
+		  display: block;
+		  img {
+			  display: none;
+		  }
+	  }
+  }
+  @include small {
+	 .social {
+		  display: block;
+		  padding-left: 0px;
+	  }	
+  }
+}
+
+#footer {
+	.wharton {
+		border-left: 1px solid #a2b1d0;
+		padding-left: 35px;
+		&.mobile {
+			display: none;
+			@include medium {
+				display: block;
+				text-align: left;
+				border: 0px;
+				padding-left: 0px;
+				li {
+					float: left;
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	.copyright {
+		padding-top: 15px;
+		clear: both;
+		p {
+			font-color: #f5f5f5;
+			color: #fff;
+			@include font-size(12px);
+			vertical-align: middle;
+			padding-top: 15px;
+			padding-left: 20px;
+			a {
+				padding-right: 4px;
+				@include small {
+					padding-right: 2px;
+				}
+			}
+			.mba a {
+				padding-left: 4px;
+			}
+			@include medium {
+				text-align: left;
+				padding-top: 0px;
+				padding-right: 0px;
+			}
+			@include small {
+				@include font-size(10px);
+				padding-left: 0px;
+			}
+		}
+		img {
+				float: left;
+				padding-right: 20px;
+		}
+	}
+}

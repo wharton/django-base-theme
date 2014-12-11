@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Font Families
+   ========================================================================== */
+
+/* Monserrat */
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../../../static/fonts/mont/Montserrat-Regular.eot');
+  src: url('../../../static/fonts/mont/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/mont/Montserrat-Regular.woff') format('woff'),
+       url('../../../static/fonts/mont/Montserrat-Regular.ttf') format('truetype'),
+       url('../../../static/fonts/mont/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+}
+
+/* Lato */
+@font-face {
+  font-family: 'Lato-Light';
+  src: url('../../../static/fonts/lato/Lato-Light.eot');
+  src: url('../../../static/fonts/lato/Lato-Light.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/lato/Lato-Light.woff') format('woff'),
+       url('../../../static/fonts/lato/Lato-Light.ttf') format('truetype'),
+       url('../../../static/fonts/lato/Lato-Light.svg#Lato-Light') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../../../static/fonts/lato/Lato-Bold.eot');
+  src: url('../../../static/fonts/lato/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/lato/Lato-Bold.woff') format('woff'),
+       url('../../../static/fonts/lato/Lato-Bold.ttf') format('truetype'),
+       url('../../../static/fonts/lato/Lato-Bold.svg#Lato-Bold') format('svg');
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('../../../static/fonts/lato/Lato-Regular.eot');
+  src: url('../../../static/fonts/lato/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/lato/Lato-Regular.woff') format('woff'),
+       url('../../../static/fonts/lato/Lato-Regular.ttf') format('truetype'),
+       url('../../../static/fonts/lato/Lato-Regular.svg#Lato-Regular') format('svg');
+}
+
+/* Baskerville */
+
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: url('../../../static/fonts/bask/LibreBaskerville-Regular.eot');
+  src: url('../../../static/fonts/bask/LibreBaskerville-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/bask/LibreBaskerville-Regular.woff') format('woff'),
+       url('../../../static/fonts/bask/LibreBaskerville-Regular.ttf') format('truetype'),
+       url('../../../static/fonts/bask/LibreBaskerville-Regular.svg#LibreBaskerville-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'LibreBaskerville-Bold';
+  src: url('../../../static/fonts/bask/LibreBaskerville-Bold.eot');
+  src: url('../../../static/fonts/bask/LibreBaskerville-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/bask/LibreBaskerville-Bold.woff') format('woff'),
+       url('../../../static/fonts/bask/LibreBaskerville-Bold.ttf') format('truetype'),
+       url('../../../static/fonts/bask/LibreBaskerville-Bold.svg#LibreBaskerville-Bold') format('svg');
+}
+
+/* Lustria */
+@font-face {
+  font-family: 'Lustria-Regular';
+  src: url('../../../static/fonts/lus/Lustria-Regular.eot');
+  src: url('../../../static/fonts/lus/Lustria-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../../../static/fonts/lus/Lustria-Regular.woff') format('woff'),
+       url('../../../static/fonts/lus/Lustria-Regular.ttf') format('truetype'),
+       url('../../../static/fonts/lus/Lustria-Regular.svg#Lustria-Regular') format('svg');
+}
+
+/* Monserrat (closest free Gotham Equivalent */
+$mont: 'Montserrat-Regular',sans-serif;
+
+/* Lato (close Helvetica Roma sans-serif match) */
+$lato: 'Lato-Light', sans-serif;
+$latoBold: 'Lato-Bold', sans-serif;
+$latoRegular: 'Lato-Regular', sans-serif;
+
+/* Baskerville (close Palantino Linotype) */
+$bask: 'LibreBaskerville-Regular', sans-serif;
