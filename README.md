@@ -62,7 +62,11 @@ Create a new directory for your app's templates and have your base.html extend o
            detail.html
 </code></pre>
            
-###### Note: There are a few layout examples already created in the 'templates/layout_options" directory.
+#### Customizing your Layout
+
+There are a few layout options included in the base-theme pip install (i.e. left_nav, full-width, etc.). Each option
+extends the main base.html template. You can extend the layout you prefer in your app's
+base.html like this (just an example): {% extends 'full_width.html' %}.
 
 #### Utilizing the Django Block System
 
