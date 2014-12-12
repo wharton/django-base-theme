@@ -12,8 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static "favicon.ico" %}">
-    <title>{% block title %}Wharton Shoutouts{% endblock %}</title>
-    {% block extra_head %}{% endblock %}
+    <title>{% block title %}Wharton Shoutouts{% endblock title %}</title>
+    {% block extra_head %}{% endblock extra_head %}
     <!-- Bootstrap Styles -->
     {% bootstrap_css %}
      <!-- Custom Styles -->
@@ -24,7 +24,7 @@
     <!--[if lt IE 9]>
     	<script src="{% static "js/vendor/respond.min.js" %}"></script>
     <![endif]-->
-    {% block extra_head_bottom %}{% endblock %}
+    {% block extra_head_bottom %}{% endblock extra_head_bottom %}
   </head>
 <body>
   <!--[if lt IE 7]>
@@ -32,7 +32,8 @@
     Please <a href="http://browsehappy.com/">upgrade your browser</a> 
     to improve your experience.
   </p>
-  <![endif]-->  
+  <![endif]--> 
+{% block header_wrapper %} 
 <header id="header" role="heading">
 {% block header %}
 <h2 class="visuallyhidden">Header</h2>
@@ -87,20 +88,24 @@
  <!--/ end container -->
 </div>
 <!-- end top-nav -->
+{% block banner_wrapper %}
 <div id="banner" role="banner">
  <h2 class="visuallyhidden">Banner</h2>
  <div class="container">
    <div class="row">
 	   {% block header_logo %}
      	<img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo">
-     {% endblock %}
-     {% block header_title %}<div id="title">Wharton Computing</div>{% endblock %}
+     {% endblock header_logo %}
+     {% block header_title %}<div id="title">Wharton Computing</div>{% endblock header_title %}
    </div>
    <!--/ end row -->
  </div>
  <!--/ end container -->
 </div>
 <!--/ end banner -->
+{% endblock banner_wrapper %}
+
+{% block main_nav_wrapper %}
 <nav class="navbar navbar-inverse main-nav" role="navigation">
  <h2 class="visuallyhidden">Main Navigation</h2>
  <div class="container">
@@ -112,7 +117,7 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
        </button>
-       <a class="navbar-brand visuallyhidden" href="#">Starter Kit</a>
+       <a class="navbar-brand visuallyhidden" href="#">Wharton</a>
        <div id="top-left-container"></div>
      </div>
      <div class="collapse navbar-collapse">
@@ -133,8 +138,8 @@
 		         </ul>
 		         <li><a href="#">Item 5</a></li>
 		         <li><a href="#">Item 6</a></li>
-          	{% endblock %}
-          {% endblock %}
+          	{% endblock mobile_sidebar_nav %}
+          {% endblock header_main_nav %}
        </ul>
      </div>
      <!--/ end nav-collapse -->
@@ -153,6 +158,9 @@
  <!-- /end container -->
 </nav>
 <!-- /end main-nav -->
+{% endblock main_nav_wrapper %}
+
+{% block breadcrumb_wrapper %}
 <div id="breadcrumb">
  <h2 class="visuallyhidden">Breadcrumbs</h2>
  <div class="container">
@@ -161,13 +169,15 @@
 	     {% block breadcrumb %}
        <li><a href="#">Crumb Parent</a></li>
        <li class="active">Crumb Child</li>
-       {% endblock %}
+       {% endblock breadcrumb %}
      </ol>
    </div>
  </div>
 </div>
+{% endblock breadcrumb_wrapper %}
 {% endblock header %}
 </header><!-- /end header -->
+{% endblock header_wrapper %}
  
  {% block content_wrapper %}
  <main id="content" role="main">
@@ -190,7 +200,7 @@
 		        </nav>
 		      </div>
 		    </aside>
-		    {% endblock %}
+		    {% endblock main_sidebar %}
 		    {% block main_text_area %}
 		    <div class="col-md-9">
 		      <h2>Main Content</h2>
@@ -240,15 +250,16 @@
 		      </section>
 		    </div>
 		    <!-- end col-md-9 -->
-		    {% endblock %}
+		    {% endblock main_text_area %}
 		  </div>
 		  <!--/ end row -->
 		</div>
 		<!--/ end container -->
-   {% endblock %}
+   {% endblock content %}
  </main><!--/ end main content -->
  {% endblock content_wrapper %}
   
+ {% block footer_wrapper %}
  <footer id="footer">
  {% block footer %}
 	<div class="container">
@@ -319,6 +330,7 @@
 	</div><!--/ end container -->
 	{% endblock footer %}
   </footer>
+  {% endblock footer_wrapper %}
   
   {% block footer_js %}
   <!-- Core JS
@@ -330,7 +342,7 @@
   <script src="{% static "js/custom.js" %}"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
-  {% endblock %}
-  {% block extra_footer_js %}{% endblock %}
+  {% endblock footer_js %}
+  {% block extra_footer_js %}{% endblock extra_footer_js %}
 </body>
 </html>
