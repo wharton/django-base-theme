@@ -37,9 +37,9 @@ TEMPLATE_DIRS = (
 	
 2.) pip install django-bootstrap3 
 
-3.) Run 'python manage.py collectstatic' to update your static files in your project directory.
+3.) Run "python manage.py collectstatic" to update your static files in your project directory.
 
-You may need to add '--upgrade' to the end of the pip install to get the latest files.
+###### You may need to add '--upgrade' to the end of the pip install to get the latest files.
 
 #### Installation via Git Clone
 
@@ -48,7 +48,7 @@ the files where you want them.
 
 #### To customize your app's templates:
 		
-If you are customizing the base.html for your own app, create a new directory for your app's templates and have your base.html extend off the main base.html template, like this:
+Create a new directory for your app's templates and have your base.html extend off the main base.html template, like this:
 
 <pre><code>templates/
      base.html #### main base.html
@@ -62,9 +62,11 @@ If you are customizing the base.html for your own app, create a new directory fo
            detail.html
 </code></pre>
            
-There are a few layout options already created in the 'templates/layout_options" directory, each option extends the main 'base.html' template. You can simply copy and paste the code from one of those layouts into your app's 'base.html.' Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
+###### Note: There are a few layout examples already created in the 'templates/layout_options" directory.
 
 #### Initial Test View/Url Configuration
+
+###### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
 
 This is just an example:
 
@@ -85,10 +87,13 @@ urlpatterns = patterns('',
 </code></pre>
 
 #### Updating your project's stylesheets
-You can update the styles via the SASS files (file extension .scss):
-- Directory path --> 'static/scss/scss/example-folder/example-file.scss'
 
-Or if you don't want to use SASS (or just need to add a few custom styles), you could add your custom styles here:
-- Directory path --> 'static/scss/compiled_css/custom.css'
+##### You can update the styles via the SASS files (file extension .scss). Example paths:
 
-Note: Don't add styles to 'compiled_css/all.css' directly, as they could potentially get overwritten when SASS is compiled. 
+<pre><code>'static/scss/scss/example-folder/example-file.scss'</code></pre>
+
+##### Or if you don't want to use SASS (or just need to add a few custom styles), you could add your custom styles here:
+
+<pre><code>'static/scss/compiled_css/custom.css'</code></pre>
+
+###### Note: Don't add styles to 'compiled_css/all.css' directly, as they could potentially get overwritten when SASS is compiled. 
