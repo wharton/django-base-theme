@@ -64,6 +64,13 @@ Create a new directory for your app's templates and have your base.html extend o
            
 ###### Note: There are a few layout examples already created in the 'templates/layout_options" directory.
 
+#### Utilizing the Django Block System
+
+The official Django docs do a good job of explaining how template inheritance works and how to utilize
+the block system.
+
+https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance
+
 #### Initial Test View/Url Configuration
 
 ###### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
