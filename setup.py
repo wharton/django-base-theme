@@ -10,7 +10,6 @@ setup(
     package_data={'base_theme': [
         'templates/*.html',
         'templates/your_app/*.html',
-        'templates/layout_options/*.html',
         'static/bootstrap_css/*.css',
         'static/fonts/*.*',
         'static/fonts/bask/*.*',

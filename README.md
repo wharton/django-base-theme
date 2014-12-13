@@ -4,6 +4,7 @@
 
 ##### Components & Standards: 
 - Twitter Bootstrap 3
+- Normalize
 - HTML5 Boilerplate 
 - HTML5 & CSS3
 - SASS/SCSS (compiled via Compass)
@@ -51,13 +52,12 @@ the files where you want them.
 Create a new directory for your app's templates and have your base.html extend off the main base.html template, like this:
 
 <pre><code>templates/
-     base.html #### main base.html
      your-app1/ #### same name as your app
-           base.html #### Inherits from main base.html
+           base.html #### Inherits from project's base.html in your site-packages folder
            list.html
            detail.html
      your-app2/ #### same name as your app
-           base.html #### Inherits from main base.html 
+           base.html #### Inherits from project's base.html in your site-packages folder
            list.html
            detail.html
 </code></pre>
@@ -66,7 +66,9 @@ Create a new directory for your app's templates and have your base.html extend o
 
 There are a few layout options included in the base-theme pip install (i.e. left_nav, full-width, etc.). Each option
 extends the main base.html template. You can extend the layout you prefer in your app's
-base.html like this (just an example): {% extends 'full_width.html' %}.
+base.html like this: (just an example): 
+
+<pre><code>{% extends 'full_width.html' %}</code></pre>
 
 #### Utilizing the Django Block System
 
