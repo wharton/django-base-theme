@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% block content_wrapper %}
 {% block content %}
 <h2 class="visuallyhidden">Main Content</h2>
 <div class="container">
   <div class="row">
+	  {% block main_text_area %}
     <div class="col-md-12">
       <h2>Main Content</h2>
       <section id="part-one">
@@ -50,8 +52,10 @@
       </section>
     </div>
     <!-- end col-md-12-->
+    {% block main_text_area %}
   </div>
   <!--/ end row -->
 </div>
 <!--/ end container -->
 {% endblock %}
+{% endblock content_wrapper %}

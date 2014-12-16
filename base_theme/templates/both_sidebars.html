@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% block content_wrapper %}
 {% block content %}
 <h2 class="visuallyhidden">Main Content</h2>
 <div class="container">
   <div class="row">
+	  {% block main_sidebar %}
     <aside id="sidebar" role="complimentary">
       <div class="col-md-3">
         <h2>Sidebar Content</h2>
@@ -18,6 +20,8 @@
         </nav>
       </div>
     </aside>
+     {% endblock main_sidebar %}
+     {% block main_text_area %}
     <div class="col-md-6">
       <h2>Main Content</h2>
       <section id="part-one">
@@ -63,7 +67,9 @@
         </article>
       </section>
     </div>
+    {% block main_text_area %}
     <!-- end col-md-6 -->
+    {% block right_sidebar %}
     <aside id="sidebar" role="complimentary">
       <div class="col-md-3">
         <h2>Sidebar Content</h2>
@@ -78,8 +84,10 @@
         </nav>
       </div>
     </aside>
+    {% endblock right_sidebar %}
   </div>
   <!--/ end row -->
 </div>
 <!--/ end container -->
 {% endblock %}
+{% endblock content_wrapper %}
