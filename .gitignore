@@ -50,9 +50,6 @@ Desktop.ini
 # projects dir
 projects/
 
-# static files
-static/
-
 # HTML coverage
 htmlcov/
 
