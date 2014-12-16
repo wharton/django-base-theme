@@ -17,8 +17,9 @@
     <!-- Bootstrap Styles -->
     {% bootstrap_css %}
      <!-- Custom Styles -->
-    <link href="{% static "scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "scss/compiled_css/all.min.css" %}" rel="stylesheet" type="text/css">
     <link href="{% static "scss/compiled_css/custom.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "fonts/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <!-- Place modernizer.js inside <head> -->
     <script src="{% static "js/vendor/modernizr.min.js" %}"></script>
     <!--[if lt IE 9]>
@@ -338,10 +339,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="{% static "js/vendor/jquery.min.js" %}"></script>
   <script src="{% static "js/bootstrap.min.js" %}"></script>
-  <script src="{% static "js/plugins.js" %}"></script>
-  <script src="{% static "js/custom.js" %}"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="{% static "js/ie10-viewport-bug-workaround.js" %}"></script>
+  <script src="{% static "js/all.min.js" %}"></script>
   {% endblock footer_js %}
   {% block extra_footer_js %}{% endblock extra_footer_js %}
 </body>
