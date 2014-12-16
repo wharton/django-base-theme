@@ -14,13 +14,18 @@
 - Font Awesome
 - Fonts from fontpro.com (Open Font License)
 
+##### Notes on this Guide
+
+I use "project" to refer to the entire application and all its parts and "app" to refer to a submodule of the application.
+
+So, for example, a project might be building a website about cooking, and that website might have 4 apps that integrate different features 
+into the website (i.e. blog app, survey app, photos app, etc.)
+
 #### Update your project's settings.py file
 
 ##### Add the following to the bottom of your settings.py file:
 
-<pre><code>STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+<pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
@@ -39,44 +44,82 @@ TEMPLATE_DIRS = (
 	
 2.) pip install django-bootstrap3 
 
-3.) Run "python manage.py collectstatic" to update your static files in your project directory.
+3.) Run "python manage.py collectstatic" to update your static files in your project directory. This command will create a folder called "static"
+    in your project's root directory, which will include all your static files.
 
-###### You may need to add '--upgrade' to the end of the pip install to get the latest files.
+4.) If you need to update any of these apps, just include "--upgrade" at the end of the pip install.
 
-#### Installation via Git Clone
-
-If you don't want to pip install, you can always just clone the repo into your project and move
-the files where you want them.
 
 #### To customize your app's templates:
-		
-Create a new directory for your app's templates and have your base.html extend off the main base.html template, like this:
 
-<pre><code>templates/
-     your-app1/ #### same name as your app
-           base.html #### Inherits from project's base.html in your site-packages folder
-           list.html
-           detail.html
-     your-app2/ #### same name as your app
-           base.html #### Inherits from project's base.html in your site-packages folder
+1.) Create a new folder in your project directory called "templates." (Which we just defined in our settings.py file above)
+		
+2.) Create a directory within "templates" for your app and call it the name of your app. 
+    So, if your app is "polls," your folder would be called "polls."
+
+3.) Within that app folder, create a template called "base.html." Below is an example breakdown:
+
+<pre><code>project/
+		manage.py
+project/
+		settings.py
+static/
+		css/
+your-app/
+		views.py
+templates/
+     your-app/ #### same name as your app
+           base.html #### Your base inherits from one of the layout templates.
            list.html
            detail.html
 </code></pre>
+
+4.) Your app's base.html should at least have this (you can find this code in the Django Base Theme repo as well):
+
+<pre><code>{% extends "left_sidebar.html" %}
+{% load staticfiles %}
+{% block title %}Your App Name{% endblock %}
+<!--- ==========================================================================
+   Include your custom blocks/html below:
+   ========================================================================== --->
+</code></pre>
+
+5.) And that is all you need to get started! Note the "extends" left_sidebar command. 
+    Remember extends must always be at the top of your file and nothing can be above it. 
+
+6.) You can find different layouts here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
            
-#### Customizing your Layout
-
-There are a few layout options included in the base-theme pip install (i.e. left_nav, full-width, etc.). Each option
-extends the main base.html template. You can extend the layout you prefer in your app's
-base.html like this: (just an example): 
-
-<pre><code>{% extends 'full_width.html' %}</code></pre>
 
 #### Utilizing the Django Block System
 
-The official Django docs do a good job of explaining how template inheritance works and how to utilize
-the block system.
+The official Django docs do a good job of explaining how template inheritance works and how to utilize the block system.
 
 https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance
+
+Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed:
+
+- {% block title %}
+- {% block extra_head %} 
+- {% block extra_head_bottom %}
+- {% block header_wrapper %}
+- {% block header %}
+- {% block banner_wrapper %}
+- {% block header_logo %}
+- {% block header_title %}
+- {% block main_nav_wrapper %}
+- {% block header_main_nav %}
+- {% block mobile_sidebar_nav %}
+- {% block breadcrumb_wrapper %}
+- {% block breadcrumb %}
+- {% block content_wrapper %}
+- {% block content %}
+- {% block main_sidebar %}
+- {% block main_text_area %}
+- {% block footer_wrapper %}
+- {% block footer %}
+- {% block footer_js %}
+- {% block extra_footer_js %}
+
 
 #### Initial Test View/Url Configuration
 
