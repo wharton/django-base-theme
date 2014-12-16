@@ -12,6 +12,7 @@ setup(
         'templates/your_app/*.html',
         'static/bootstrap_css/*.css',
         'static/fonts/*.*',
+        'static/fonts/*.min.*',
         'static/fonts/bask/*.*',
         'static/fonts/lato/*.*',
         'static/fonts/lus/*.*',

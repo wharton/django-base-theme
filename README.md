@@ -11,6 +11,7 @@
 - jQuery
 - Modernizer.js
 - Respond.js
+- Font Awesome
 - Fonts from fontpro.com (Open Font License)
 
 #### Update your project's settings.py file
