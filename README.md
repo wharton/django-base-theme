@@ -96,7 +96,7 @@ templates/
            detail.html
 </code></pre>
 
-4.) Your app's base.html should at least have this (you can find this code in the Django Base Theme repo as well):
+4.) The Django Base Theme includes the following as an example in the templates folder:
 
 <pre><code>{% extends "left_sidebar.html" %}
 {% load staticfiles %}
