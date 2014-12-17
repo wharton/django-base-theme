@@ -20,14 +20,21 @@ I use "project" to refer to the entire application and all its parts and "app" t
 
 #### Update your project's settings.py file
 
-##### Add the following to the bottom of your settings.py file:
+##### Add the following to the bottom of your settings.py file (you can either have all your styles in the static_dev folder 
+##### or within the static_dev folder have custom styles for each app you make):
 
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static_dev"),
+    os.path.join(BASE_DIR, "static_dev/your-app"),
+)
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 </code></pre>
+
 
 ##### Add the following to the 'Installed_Apps' section: 
 
@@ -41,15 +48,33 @@ TEMPLATE_DIRS = (
 	
 2.) pip install django-bootstrap3 
 
-3.) Run "python manage.py collectstatic" to update your static files in your project directory. This command will create a folder called "static"
-    in your project's root directory, which will include all your static files.
+3.) If you need to update any of these apps, just include "--upgrade" at the end of the pip install.
 
-4.) If you need to update any of these apps, just include "--upgrade" at the end of the pip install.
+
+#### To customize your app's styles
+
+1.) Create a new folder in your project directory called "static_dev."
+2.) Create a new folder in static_dev and call it the name of your app. So, if your app is "polls,"
+    your folder would be called "polls."
+3.) Create your stylesheets in that folder. Below is an example breakdown:
+
+<pre><code>project/
+		manage.py
+project/
+		settings.py
+static/
+		css/
+your-app/
+		views.py
+static_dev/
+     your-app/ #### same name as your app
+           custom.scss #### Add your custom styles here
+</code></pre>
 
 
 #### To customize your app's templates:
 
-1.) Create a new folder in your project directory called "templates." (Which we just defined in our settings.py file above)
+1.) Create a new folder in your project directory called "templates."
 		
 2.) Create a directory within "templates" for your app and call it the name of your app. 
     So, if your app is "polls," your folder would be called "polls."
@@ -81,10 +106,10 @@ templates/
    ========================================================================== --->
 </code></pre>
 
-5.) And that is all you need to get started! Note the "extends" left_sidebar command. 
+5.) And that is all you need to get started!
     Remember extends must always be at the top of your file and nothing can be above it. 
 
-6.) You can find different layouts here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
+6.) You can find different layouts for your app: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
            
 
 #### Utilizing the Django Block System
@@ -111,6 +136,7 @@ Here is a list of blocks included in the Django Base Theme that you can use to c
 - {% block content_wrapper %}
 - {% block content %}
 - {% block main_sidebar %}
+- {% block right_sidebar %}
 - {% block main_text_area %}
 - {% block footer_wrapper %}
 - {% block footer %}
@@ -120,14 +146,12 @@ Here is a list of blocks included in the Django Base Theme that you can use to c
 
 #### Initial Test View/Url Configuration
 
-###### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
-
 This is just an example:
 
 <pre><code>from django.views.generic import TemplateView
 
 class BaseView(TemplateView):
-    template_name = "your_app/base.html" 
+    template_name = "your_app/base.html" #### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
 </code></pre>
     
 And in your urls.py file:
@@ -139,15 +163,3 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 </code></pre>
-
-#### Updating your project's stylesheets
-
-##### You can update the styles via the SASS files (file extension .scss). Example paths:
-
-<pre><code>'static/scss/scss/example-folder/example-file.scss'</code></pre>
-
-##### Or if you don't want to use SASS (or just need to add a few custom styles), you could add your custom styles here:
-
-<pre><code>'static/scss/compiled_css/custom.css'</code></pre>
-
-###### Note: Don't add styles to 'compiled_css/all.css' directly, as they could potentially get overwritten when SASS is compiled. 

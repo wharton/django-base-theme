@@ -1,6 +1,9 @@
 {% extends "left_sidebar.html" %}
 {% load staticfiles %}
 {% block title %}Your App Name{% endblock %}
+{% block extra_head_bottom %}
+    <link href="{% static "your-app/custom.css" %}" rel="stylesheet" type="text/css">
+{% endblock extra_head_bottom %}
 <!--- ==========================================================================
    Include your custom blocks/html below:
    ========================================================================== --->
