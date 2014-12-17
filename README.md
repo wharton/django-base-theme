@@ -18,9 +18,6 @@
 
 I use "project" to refer to the entire application and all its parts and "app" to refer to a submodule of the application.
 
-So, for example, a project might be building a website about cooking, and that website might have 4 apps that integrate different features 
-into the website (i.e. blog app, survey app, photos app, etc.)
-
 #### Update your project's settings.py file
 
 ##### Add the following to the bottom of your settings.py file:
