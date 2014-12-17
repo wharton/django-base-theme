@@ -16,25 +16,23 @@
 
 ##### Notes on this Guide
 
-I use "project" to refer to the entire application and all its parts and "app" to refer to a submodule of the application.
+I use "project" to refer to the entire application and "app" to refer to a submodule of the application.
 
 #### Update your project's settings.py file
 
-##### Add the following to the bottom of your settings.py file (you can either have all your styles in the static_dev folder 
-##### or within the static_dev folder have custom styles for each app you make):
+##### Add the following to the bottom of your settings.py file:
 
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static_dev"),
-    os.path.join(BASE_DIR, "static_dev/your-app"),
+    os.path.join(BASE_DIR, "static_dev"), #### if you want your styles directly in the static_dev folder 
+    os.path.join(BASE_DIR, "static_dev/your-app"), #### or if you want to break out your styles per app add a line like this
 )
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 </code></pre>
-
 
 ##### Add the following to the 'Installed_Apps' section: 
 
@@ -54,8 +52,10 @@ TEMPLATE_DIRS = (
 #### To customize your app's styles
 
 1.) Create a new folder in your project directory called "static_dev."
+
 2.) Create a new folder in static_dev and call it the name of your app. So, if your app is "polls,"
     your folder would be called "polls."
+    
 3.) Create your stylesheets in that folder. Below is an example breakdown:
 
 <pre><code>project/
@@ -101,6 +101,9 @@ templates/
 <pre><code>{% extends "left_sidebar.html" %}
 {% load staticfiles %}
 {% block title %}Your App Name{% endblock %}
+{% block extra_head_bottom %}
+    <link href="{% static "your-app/custom.css" %}" rel="stylesheet" type="text/css">
+{% endblock extra_head_bottom %}
 <!--- ==========================================================================
    Include your custom blocks/html below:
    ========================================================================== --->
