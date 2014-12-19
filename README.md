@@ -7,7 +7,7 @@
 - Normalize
 - HTML5 Boilerplate 
 - HTML5 & CSS3
-- SASS/SCSS (compiled via Compass)
+- SASS/SCSS
 - jQuery
 - Modernizer.js
 - Respond.js
@@ -49,14 +49,11 @@ TEMPLATE_DIRS = (
 3.) If you need to update any of these apps, just include "--upgrade" at the end of the pip install.
 
 
-#### To customize your app's styles
+#### To customize your project's or app's styles and javascript
 
-1.) Create a new folder in your project directory called "static_dev."
+1.) Create a new folder in your project directory called "assets"
 
-2.) Create a new folder in static_dev and call it the name of your app. So, if your app is "polls,"
-    your folder would be called "polls."
-    
-3.) Create your stylesheets in that folder. Below is an example breakdown:
+2.) Create your custom stylesheets and/or javascript files in the assets folder. Below is an example breakdown:
 
 <pre><code>project/
 		manage.py
@@ -66,11 +63,10 @@ static/
 		css/
 your-app/
 		views.py
-static_dev/
-     your-app/ #### same name as your app
-           custom.scss #### Add your custom styles here
+assets/
+     custom.css
+     custom.js
 </code></pre>
-
 
 #### To customize your app's templates:
 
@@ -101,11 +97,19 @@ templates/
 <pre><code>{% extends "left_sidebar.html" %}
 {% load staticfiles %}
 {% block title %}Your App Name{% endblock %}
-{% block extra_head_bottom %}Link your custom stylesheet here{% endblock extra_head_bottom %}
+{% block extra_head_bottom %}<link href="{% static "your-app/compiled_scss.css" %}" rel="stylesheet" type="text/css">{% endblock extra_head_bottom %}
 <!--- ==========================================================================
    Include your custom blocks/html below:
    ========================================================================== --->
-</code></pre>
+   
+   
+   
+
+
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+{% block extra_footer_js %}<script src="{% static "js/custom.js" %}"></script>{% endblock extra_footer_js %}</code></pre>
 
 5.) And that is all you need to get started!
     Remember extends must always be at the top of your file and nothing can be above it. 
