@@ -25,8 +25,7 @@ I use "project" to refer to the entire application and "app" to refer to a submo
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static_dev"), #### if you want your styles directly in the static_dev folder 
-    os.path.join(BASE_DIR, "static_dev/your-app"), #### or if you want to break out your styles per app add a line like this
+    os.path.join(BASE_DIR, "assets"),
 )
 
 TEMPLATE_DIRS = (
