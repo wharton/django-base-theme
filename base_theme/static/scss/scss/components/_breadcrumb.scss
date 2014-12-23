@@ -9,10 +9,10 @@
 	.breadcrumb {
 		margin-bottom:0px;
 		padding-left: 0px;
-		@include font-size(15px);
+		@include font-size(19px);
 	}
 	.breadcrumb > li+li:before {
-			color: #999;
+			color: #a5a5a5;
 			padding-top: 0px;
 			padding-bottom: 0px;
 			padding-right: 10px;
@@ -25,7 +25,11 @@
 	ol li:first-child {
 		text-transform: uppercase;
 		a {
-			font-family: $bask;
+			font-family: $pal;
+			-moz-font-smoothing: antialiased;
+			-webkit-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
 		}
 	}
 	a {
@@ -33,6 +37,9 @@
 		&:hover, &:focus {
 			color: $red;
 		}
+	}
+	li {
+		font-family: $helv;
 	}
 	.active {
 		@include font-size(13px);

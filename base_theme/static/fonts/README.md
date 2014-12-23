@@ -1,1 +1,1 @@
-- Fonts taken from Fontpro.com <br />
+- Fonts served via Fonts.com <br />

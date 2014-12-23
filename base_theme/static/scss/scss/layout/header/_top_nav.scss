@@ -25,6 +25,8 @@
 		a {
 			padding: 2px 8px;
 			@include font-size(11px);
+			font-family: $helv;
+			font-weight: 400;
 			color: #fff;
 			&:hover, &:focus {
 				background-color: #3d3d3d;

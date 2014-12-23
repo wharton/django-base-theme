@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block title %}Your App Name{% endblock %}
 {% block extra_head_bottom %}
-    <link href="{% static "custom.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static "styles.css" %}" rel="stylesheet" type="text/css">
 {% endblock extra_head_bottom %}
 <!--- ==========================================================================
    Include your custom blocks/html below:
@@ -40,5 +40,5 @@
 
 <!-- Placed at the end of the document so the pages load faster -->
 {% block extra_footer_js %}
-    <script src="{% static "custom.js" %}"></script>
+    <script src="{% static "scripts.js" %}"></script>
 {% endblock extra_footer_js %}   

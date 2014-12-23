@@ -14,10 +14,10 @@ body {
 	background: #efefef;
 	background: url('../../../static/img/bg/bg-body.jpg') center -1px repeat-y;
 }
-
+	
 body, 
 html {
-    font-family: $lato;
+    font-family: $roma;
     font-weight: 300;
     font-size: 1em;
     line-height: 1.4;
@@ -30,7 +30,9 @@ li {
 p, 
 ul li,
 ol {
+	font-family: $roma;
 	word-wrap: break-word;
+	@include font-size(18px);
 }
 
 /* ==========================================================================
@@ -38,7 +40,6 @@ ol {
    ========================================================================== */
    
 #{headings()} {
-	 font-family: $bask;
 	 margin-bottom: 20px;
 	 word-wrap: break-word;
 	 font-weight: normal; 
@@ -46,11 +47,50 @@ ol {
 }
 
 #{headings()} a {
-	 font-family: $bask;
 	 margin-bottom: 20px;
 	 word-wrap: break-word;
 	 font-weight: normal; 
 	 line-height: 1.1;
+}
+
+h1 {
+	font-family: $pal;
+	font-size: 2.5em;
+	line-height: 1;
+	color: #1a1a1a;
+}
+
+h2 {
+	font-family: $helvMedi;
+	font-size: 1.625em;
+	color: #333333;
+}
+
+h3 {
+	font-family: $helvLigh;
+	font-size: 1.7em;
+	color: #0e76bc;
+}
+
+h4 {
+	font-family: $helvlt;
+	font-size: 1.75em;
+	font-weight: normal;
+	color: #4d4d4d;
+	letter-spacing: 0.05em;
+}
+
+h5 {
+	font-family: $helvMedi;
+	font-size: 1.313em;
+	color: #262626;
+}
+
+h6 {
+	font-family: $helvBold;
+	font-size: 1.125em;
+	color: #54afdb;
+	text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -58,7 +98,7 @@ ol {
    ========================================================================== */
    
 p {
-	 font-family: $lato;
+	 font-family: $roma;
 	 @include font-size(18px);
 	 line-height: 1.5em;
 	 margin: 0 0 1.5em 0;
@@ -70,7 +110,7 @@ p {
    ========================================================================== */
 
 a {
-	font-family: $lato;
+	font-family: $roma;
 	color: $red;
 	&:hover, &:focus {
 		text-decoration: none;
@@ -84,7 +124,7 @@ a {
 
 strong, b {
 	color: #1b1b1b;
-	font-family: $latoBold;
+	font-family: $roma;
 }
 
 /* ==========================================================================
@@ -92,7 +132,7 @@ strong, b {
    ========================================================================== */
    
 blockquote {
-	font-family: $lato;
+	font-family: $roma;
 	background-color: #eee;
 	@include border-radius(4px);
 	padding: 30px;
