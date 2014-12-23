@@ -19,7 +19,7 @@
 		list-style-type: none;
 		@include font-size(12px);
 		padding-bottom: 15px;
-		font-family: $lato;
+		font-family: $helv;
 	}
 }
 	
@@ -36,6 +36,7 @@
 	a {
 	  color: #f5f5f5;
 		text-decoration: none;
+		font-family: $helv;
 		&:hover {
 			color: #ccc;
 		}
@@ -43,7 +44,11 @@
 	h5 {
 		text-transform: uppercase;
 		color: #A2B1D6;
-		font-weight: normal;
+		font-weight: bold;
+		-moz-font-smoothing: antialiased;
+		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
 		@include font-size(13px);
 	}
 }

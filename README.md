@@ -12,6 +12,7 @@
 - Modernizer.js
 - Respond.js
 - Font Awesome
+- Custom fonts served via Fonts.com
 
 ##### Notes on this Guide
 
@@ -67,13 +68,11 @@ TEMPLATE_DIRS = (
 		manage.py
 project/
 		settings.py
-static/
-		css/
 your-app/
 		views.py
 assets/
-		 styles.css
-		 scripts.js
+		 styles.css #### Your custom styles here.
+		 scripts.js #### Your custom js here.
 templates/
      your-app/ #### same name as your app
            base.html #### Your base inherits from one of the layout templates.

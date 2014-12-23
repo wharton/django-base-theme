@@ -3,8 +3,10 @@
    ========================================================================== */
 
 .main-nav {
+	font-family: $helv;
 	&.navbar-inverse .navbar-nav > .active > a {
 		background: none;
+		font-family: $helv;
 		border-top: 3px solid $red;
 		@include small {
 			border-top: 0px;
@@ -38,8 +40,12 @@
 				padding-top: 4px;
 				padding-bottom: 4px;
 				padding-left: 15px;
-				font-family: $lato;
-				font-weight: 300;
+				font-family: $helv;
+				-moz-font-smoothing: antialiased;
+				-webkit-font-smoothing: antialiased;
+				font-smoothing: antialiased;
+				text-rendering: optimizeLegibility;
+				font-weight: 400;
 				@include font-size(14px);
 				color: #fff;
 				border-left: 1px solid #6b87b8;
