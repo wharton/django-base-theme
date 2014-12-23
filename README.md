@@ -7,6 +7,7 @@
 - Normalize
 - HTML5 Boilerplate 
 - HTML5 & CSS3
+- Responsive
 - SASS/SCSS
 - jQuery
 - Modernizer.js
