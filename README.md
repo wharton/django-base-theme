@@ -81,29 +81,12 @@ templates/
            detail.html
 </code></pre>
 
-4.) The Django Base Theme includes the following as an example in its templates folder:
-
-<pre><code>{% extends "left_sidebar.html" %}
-{% load staticfiles %}
-{% block title %}Your App Name{% endblock %}
-{% block extra_head_bottom %} Link to your custom styles here. {% endblock extra_head_bottom %}
-<!--- ==========================================================================
-   Include your custom blocks/html below:
-   ========================================================================== --->
-   
-   
-   
-
-
-
-
-<!-- Placed at the end of the document so the pages load faster -->
-{% block extra_footer_js %} Link to your custom javascript here. {% endblock extra_footer_js %}</code></pre>
+4.) You can find an example of an app's base.html file here: https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 5.) And that is all you need to get started!
     Remember extends must always be at the top of your file and nothing can be above it. 
 
-6.) You can find different layouts for your app: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
+6.) You can find different layouts for your app here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
            
 #### Utilizing the Django Block System
 
