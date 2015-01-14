@@ -97,24 +97,30 @@ https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance
 Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You
 can also find them listed in the base.html template found here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
 
-- {% block title %}
-- {% block extra_head %} 
+- {% block site_title %}
+- {% block extra_head_top %} 
 - {% block extra_head_bottom %}
+
 - {% block header_wrapper %}
 - {% block header %}
+
 - {% block banner_wrapper %}
-- {% block header_logo %}
-- {% block header_title %}
+- {% block banner_logo %}
+- {% block banner_title %}
+
 - {% block main_nav_wrapper %}
-- {% block header_main_nav %}
+- {% block main_nav %}
 - {% block mobile_sidebar_nav %}
+
 - {% block breadcrumb_wrapper %}
 - {% block breadcrumb %}
-- {% block content_wrapper %}
+-     
+-	{% block content_wrapper %}
 - {% block content %}
-- {% block main_sidebar %}
+- {% block left_sidebar %}
 - {% block right_sidebar %}
-- {% block main_text_area %}
+- {% block content_area %}
+
 - {% block footer_wrapper %}
 - {% block footer %}
 - {% block footer_js %}

@@ -12,8 +12,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{% static "favicon.ico" %}">
-    <title>{% block title %}Wharton Shoutouts{% endblock title %}</title>
-    {% block extra_head %}{% endblock extra_head %}
+    <title>{% block site_title %}Wharton Shoutouts{% endblock site_title %}</title>
+    {% block extra_head_top %}{% endblock extra_head_top %}
     <!-- Bootstrap Styles -->
     {% bootstrap_css %}
     <!-- Fonts served via Fast.Fonts -->
@@ -99,7 +99,7 @@
 	   {% block header_logo %}
      	<img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo">
      {% endblock header_logo %}
-     {% block header_title %}<div id="title">Wharton Computing</div>{% endblock header_title %}
+     {% block banner_title %}<div id="title">Wharton Computing</div>{% endblock banner_title %}
    </div>
    <!--/ end row -->
  </div>
@@ -125,7 +125,7 @@
      </div>
      <div class="collapse navbar-collapse">
        <ul class="nav navbar-nav navbar-right">
-         {% block header_main_nav %}
+         {% block main_nav %}
          <li><a href="#">Item 1</a></li>
          <li><a href="#">Item 2</a></li>
          <li><a href="#">Item 3</a></li>
@@ -142,7 +142,7 @@
 		         <li><a href="#">Item 5</a></li>
 		         <li><a href="#">Item 6</a></li>
           	{% endblock mobile_sidebar_nav %}
-          {% endblock header_main_nav %}
+          {% endblock main_nav %}
        </ul>
      </div>
      <!--/ end nav-collapse -->
@@ -188,7 +188,7 @@
 		<h2 class="visuallyhidden">Main Content</h2>
 		<div class="container">
 		  <div class="row">
-			  {% block main_sidebar %}
+			  {% block left_sidebar %}
 		    <aside id="sidebar" role="complimentary">
 		      <div class="col-md-3">
 		        <h2>Sidebar Content</h2>
@@ -203,8 +203,8 @@
 		        </nav>
 		      </div>
 		    </aside>
-		    {% endblock main_sidebar %}
-		    {% block main_text_area %}
+		    {% endblock left_sidebar %}
+		    {% block content_area %}
 		    <div class="col-md-9">
 		      <h2>Main Content</h2>
 		      <section id="part-one">
@@ -253,7 +253,7 @@
 		      </section>
 		    </div>
 		    <!-- end col-md-9 -->
-		    {% endblock main_text_area %}
+		    {% endblock content_area %}
 		  </div>
 		  <!--/ end row -->
 		</div>

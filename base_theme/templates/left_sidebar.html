@@ -4,7 +4,7 @@
 <h2 class="visuallyhidden">Main Content</h2>
 <div class="container">
   <div class="row">
-	  {% block main_sidebar %}
+	  {% block left_sidebar %}
     <aside id="sidebar" role="complimentary">
       <div class="col-md-3">
         <h2>Sidebar Content</h2>
@@ -19,8 +19,8 @@
         </nav>
       </div>
     </aside>
-    {% endblock main_sidebar %}
-    {% block main_text_area %}
+    {% endblock left_sidebar %}
+    {% block content_area %}
     <div class="col-md-9">
       <h2>Main Content</h2>
       <section id="part-one">
@@ -69,9 +69,9 @@
       </section>
     </div>
     <!-- end col-md-9 -->
-    {% endblock main_text_area %}
+    {% endblock content_area %}
   </div>
   <!--/ end row -->
 </div>
 <!--/ end container -->
-{% endblock %}
+{% endblock content %}
