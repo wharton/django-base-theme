@@ -4,23 +4,7 @@
 <h2 class="visuallyhidden">Main Content</h2>
 <div class="container">
   <div class="row">
-	  {% block left_sidebar %}
-    <aside id="sidebar" role="complimentary">
-      <div class="col-md-3">
-        <h2>Sidebar Content</h2>
-        <nav id="sidebar-nav">
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a class="current" href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-            <li><a href="#">Item 4</a></li>
-            <li><a href="#">Item 5</a></li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
-    {% endblock left_sidebar %}
-    {% block inner_content %}
+	  {% block inner_content %}
     <div class="col-md-9">
       <h2>Main Content</h2>
       <section id="part-one">
@@ -67,11 +51,24 @@
           </p>
         </article>
       </section>
-    </div>
-    <!-- end col-md-9 -->
+    </div><!-- end col-md-9 -->
     {% endblock inner_content %}
-  </div>
-  <!--/ end row -->
-</div>
-<!--/ end container -->
+    {% block right_sidebar %}
+    <aside id="sidebar right" role="complimentary">
+      <div class="col-md-3">
+        <h2>Sidebar Content</h2>
+        <nav id="sidebar-nav">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a class="current" href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+            <li><a href="#">Item 4</a></li>
+            <li><a href="#">Item 5</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    {% endblock right_sidebar %}
+  </div><!--/ end row -->
+</div><!--/ end container -->
 {% endblock content %}

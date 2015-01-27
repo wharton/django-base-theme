@@ -46,7 +46,7 @@ TEMPLATE_DIRS = (
 	
 2.) pip install django-bootstrap3 
 
-3.) If you need to update any of these apps, just include "--upgrade" at the end of the pip install.
+3.) If you need to update any of these apps, just include "--upgrade" in the pip install.
 
 #### To customize your app's stylesheets or javascript
 
@@ -69,7 +69,9 @@ TEMPLATE_DIRS = (
 		manage.py
 project/
 		settings.py
+		urls.py
 your-app/
+    models.py
 		views.py
 assets/
 		 styles.css #### Your custom styles here.
@@ -84,7 +86,7 @@ templates/
 4.) You can find an example of an app's base.html file here: https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 5.) And that is all you need to get started!
-    Remember extends must always be at the top of your file and nothing can be above it. 
+    Remember extends must always be at the top of your file. 
 
 6.) You can find different layouts for your app here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
            
@@ -112,17 +114,17 @@ can also find them listed in the base.html template found here: https://github.c
 - {% block breadcrumb %}
 -	{% block content_wrapper %}
 - {% block content %}
+- {% block inner_content %}
 - {% block left_sidebar %}
 - {% block right_sidebar %}
-- {% block content_area %}
 - {% block footer_wrapper %}
 - {% block footer %}
 - {% block footer_js %}
 - {% block extra_footer_js %}
 
-#### Initial Test View/Url Configuration
+#### Initial Test View & Url Configuration
 
-This is just an example:
+This is just an example to get your started:
 
 <pre><code>from django.views.generic import TemplateView
 
