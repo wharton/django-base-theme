@@ -71,7 +71,7 @@ project/
 		settings.py
 		urls.py
 your-app/
-    models.py
+		models.py
 		views.py
 assets/
 		 styles.css #### Your custom styles here.
