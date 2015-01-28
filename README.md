@@ -48,6 +48,12 @@ TEMPLATE_DIRS = (
 
 3.) If you need to update any of these apps, just include "--upgrade" in the pip install.
 
+#### Getting Updates
+
+To get the latest updates to the base theme, just run the following command: 
+
+<pre><code>pip install git+https://github.com/wharton/django-base-theme --upgrade</code></pre>
+
 #### To customize your app's stylesheets or javascript
 
 1.) Create a new folder in your project directory called "assets"
