@@ -42,11 +42,9 @@ TEMPLATE_DIRS = (
 
 #### Installation via pip
 
-1.) pip install git+https://github.com/wharton/django-base-theme
+<pre><code>pip install git+https://github.com/wharton/django-base-theme</code></pre>
 	
-2.) pip install django-bootstrap3 
-
-3.) If you need to update any of these apps, just include "--upgrade" in the pip install.
+<pre><code>pip install django-bootstrap3</code></pre>
 
 #### Getting Updates
 
