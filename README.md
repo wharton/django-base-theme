@@ -56,7 +56,9 @@ To get the latest updates to the base theme, just run the following command:
 
 1.) Create a new folder in your project directory called "assets"
 
-2.) Create your custom stylesheets and/or javascript files in the assets folder, like this:
+2.) Create your custom stylesheets and/or javascript files in the assets folder.
+
+3.) Include a link to your custom styles/js in your template, like this: 
     https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 #### To customize your app's templates:
