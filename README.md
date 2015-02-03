@@ -56,19 +56,8 @@ To get the latest updates to the base theme, just run the following command:
 
 1.) Create a new folder in your project directory called "assets"
 
-2.) Create your custom stylesheets and/or javascript files in the assets folder. To add 
-    your custom styles or javascript, you would add a link to your template like this:
-    
-<pre><code>{% block extra_head_bottom %}
-    < link href="{% static "styles.css" %}" rel="stylesheet" type="text/css"] >
-{% endblock extra_head_bottom %}
-
-
-< !-- Placed at the end of the document so the pages load faster -- >
-{% block extra_footer_js %}
-    < script src="{% static "scripts.js" %}" >< /script >
-{% endblock extra_footer_js %}</code></pre>
-
+2.) Create your custom stylesheets and/or javascript files in the assets folder, like this:
+    https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 #### To customize your app's templates:
 
@@ -77,7 +66,7 @@ To get the latest updates to the base theme, just run the following command:
 2.) Create a directory within "templates" for your app and call it the name of your app. 
     So, if your app is "polls," your folder would be called "polls."
 
-3.) Within that app folder, create a template called "base.html."
+3.) Within that app folder, create a template called "base.html." You must have this file in your app directory.
 
 #### Below is an example breakdown for custom templates and other static files:
 
@@ -105,23 +94,7 @@ templates/
 		The original base.html is in your site-packages directory (after you pip install it).
 
 5.) Here is an example of what would go into your app's base.html file:
-
-<pre><code>{% extends "left_sidebar.html" %}
-{% load staticfiles %}
-{% block site_title %}Your App Name{% endblock site_title %}
-{% block extra_head_bottom %}
-    < link href="{% static "styles.css" %}" rel="stylesheet" type="text/css" >
-{% endblock extra_head_bottom %}
-< !--- ==========================================================================
-   Include your custom blocks/html below:
-   ========================================================================== --- >
-   
-   
-   
-<! --- Placed at the end of the document so the pages load faster --- >
-{% block extra_footer_js %}
-    < script src="{% static "scripts.js" %}" >< /script >
-{% endblock extra_footer_js %}</code></pre>
+    https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 6.) If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need to
     make sure your extends path is pointing to your app's base template, like this:
