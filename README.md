@@ -163,6 +163,6 @@ urlpatterns = patterns('',
 
 Thank you to our contributors!
 
-* Chad Whitman
-* Tim Allen
-* Frank Wiles
+* Chad Whitman https://github.com/chadwhitman
+* Tim Allen https://github.com/flipperpa
+* Frank Wiles https://github.com/frankwiles
