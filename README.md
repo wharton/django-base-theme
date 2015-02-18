@@ -158,3 +158,11 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 )
 </code></pre>
+
+#### Contributors
+
+Thank you to our contributors!
+
+* Chad Whitman
+* Tim Allen
+* Frank Wiles
