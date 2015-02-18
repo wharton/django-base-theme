@@ -4,7 +4,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->  
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,12 +31,12 @@
   </head>
 <body>
   <!--[if lt IE 7]>
-   <p class="browsehappy">You are using an <strong>outdated</strong> browser. 
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> 
+   <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a>
     to improve your experience.
   </p>
-  <![endif]--> 
-{% block header_wrapper %} 
+  <![endif]-->
+{% block header_wrapper %}
 <header id="header" role="heading">
 {% block header %}
 <h2 class="visuallyhidden">Header</h2>
@@ -181,7 +181,7 @@
 {% endblock header %}
 </header><!-- /end header -->
 {% endblock header_wrapper %}
- 
+
  {% block content_wrapper %}
  <main id="content" role="main">
    {% block content %}
@@ -216,11 +216,11 @@
 		          <p>Also, for the official Wharton styleguide visit <a href="http://standards.wharton.upenn.edu/">http://standards.wharton.upenn.edu/</a>
 		          </p>
 		        </div>
-		        <p><b>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin</b>. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some 
-		          hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' <a href="#">this is a link - you can click me</a>. In strange contrast 
+		        <p><b>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin</b>. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some
+		          hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' <a href="#">this is a link - you can click me</a>. In strange contrast
 		          to the
 		        </p>
-		        <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order 
+		        <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order
 		          by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
 		        </p>
 		        <h1>Heading 1</h1>
@@ -230,23 +230,23 @@
 		        <h5>Heading 5</h5>
 		        <h6>Heading 6</h6>
 		        <p>
-		        <blockquote>"Three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order by 
+		        <blockquote>"Three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order by
 		          thepallid steward."
 		        </blockquote>
-		        </p> 
+		        </p>
 		      </section>
 		      <section id="part-two">
 		        <header class="visuallyhidden">A Main Section</header>
 		        <h4>A Main Section</h4>
 		        <article>
 		          <h5>Article Post One</h5>
-		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried 
+		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried
 		            order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
 		          </p>
 		        </article>
 		        <article>
 		          <h5>Article Post Two</h5>
-		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried 
+		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried
 		            order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
 		          </p>
 		        </article>
@@ -261,7 +261,7 @@
    {% endblock content %}
  </main><!--/ end main content -->
  {% endblock content_wrapper %}
-  
+
  {% block footer_wrapper %}
  <footer id="footer">
  {% block footer %}
@@ -328,13 +328,13 @@
 	 </div>
 	 <div class="row copyright">
 	   <a href="http://upenn.edu"><img src="{% static "img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
-	   <p>&copy; 2014 <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a><span class="mba">|<a href="http://executivemba.wharton.upenn.edu/">Wharton Executive MBA</a></span></p>
+	   <p>&copy; {% now "Y" %} <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a><span class="mba">|<a href="http://executivemba.wharton.upenn.edu/">Wharton Executive MBA</a></span></p>
 	 </div>
 	</div><!--/ end container -->
 	{% endblock footer %}
   </footer>
   {% endblock footer_wrapper %}
-  
+
   {% block footer_js %}
   <!-- Core JS
     ================================================== -->
