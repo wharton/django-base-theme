@@ -15,6 +15,7 @@
     <title>{% block site_title %}Wharton Shoutouts{% endblock site_title %}</title>
     {% block extra_head_top %}{% endblock extra_head_top %}
     <!-- Bootstrap Styles -->
+    {% block head_css %}
     {% bootstrap_css %}
     <!-- Fonts served via Fast.Fonts -->
     <script src="http://fast.fonts.com/jsapi/9c101523-c9e9-4e52-b751-a5b16576f638.js"></script>
@@ -22,6 +23,7 @@
     <link href="{% static "scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
     <link href="{% static "scss/compiled_css/custom.css" %}" rel="stylesheet" type="text/css">
     <link href="{% static "fonts/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    {% endblock head_css %}
     <!-- Place modernizer.js inside <head> -->
     <script src="{% static "js/vendor/modernizr.min.js" %}"></script>
     <!--[if lt IE 9]>
@@ -169,10 +171,10 @@
  <div class="container">
    <div class="row">
      <ol class="breadcrumb">
-	     {% block breadcrumb %}
-       <li><a href="#">Crumb Parent</a></li>
-       <li class="active">Crumb Child</li>
-       {% endblock breadcrumb %}
+	    {% block breadcrumb %}
+        <li><a href="#">Crumb Parent</a></li>
+        <li class="active">Crumb Child</li>
+        {% endblock breadcrumb %}
      </ol>
    </div>
  </div>
