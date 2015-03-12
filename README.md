@@ -187,7 +187,7 @@ urlpatterns = patterns('',
 
 ### Using Gulp to automate your front-end workflow 
 
-Included in this repo is an example gulpfile (copied from: http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/). But, if you use Gulp, you will need to add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
+Included in this repo is an example gulpfile (copied from: http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/). But, if you use Gulp, you will need to manually add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
 
 ### Contributors
 
