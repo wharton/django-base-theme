@@ -1,8 +1,30 @@
-#### A responsive base theme for Wharton Django applications.
-- Version: 1.0
-- To be added to your Django application and customized to your needs.
+### Table of Contents
+- Introduction
+- Components & Standards
+- Quick note
+- Modifying Settings.py
+	- Adding Directories
+	- Adding Installed Apps
+- PIP installation
+- Updating Base-Theme
+- Adding custom stylesheets/javascript
+- Adding custom templates
+	- Example breakdown of static file organization
+	- Example of base.html file
+	- Example of extending your app's base file
+	- Examples of different template layout options
+- Utilizing the Django Block System
+	- A list of blocks available with base-theme
+- Example test view & url configuration
+- Example url.py file
+- Using Gulp to automate your front-end workflow
+- List of Contributors
+	
+### Introduction
+- A responsive Django-based theme designed for Wharton apps (v1.0).
+- Includes official Wharton branding styles, logos, layouts and fonts.
 
-#### Components & Standards: 
+### Components & Standards: 
 - Twitter Bootstrap 3
 - Normalize
 - HTML5 Boilerplate 
@@ -14,14 +36,15 @@
 - Respond.js
 - Font Awesome
 - Custom fonts served via Fonts.com
+- Gulp
 
-#### Notes on this Guide
+### Quick note on this Guide
 
 "Project" refers to the entire application and "app" refers to a submodule of the application.
 
-#### Update your project's settings.py file
+### Modifying Settings.py
 
-##### Add the following to the bottom of your settings.py file:
+#### Add the following to the bottom of your settings.py file:
 
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -34,25 +57,25 @@ TEMPLATE_DIRS = (
 )
 </code></pre>
 
-##### Add the following to the 'Installed_Apps' section: 
+#### Add the following to the 'Installed_Apps' section: 
 
 <pre><code>'bootstrap3',
 'base_theme',
 </code></pre>
 
-#### Installation via pip
+### PIP installation
 
 <pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme</code></pre>
 	
 <pre><code>pip install django-bootstrap3</code></pre>
 
-#### Getting Updates
+### Updating Base-Theme
 
 To get the latest updates to the base theme, just run the following command: 
 
 <pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme --upgrade</code></pre>
 
-#### To customize your app's stylesheets or javascript
+### Add custom stylesheets or javascript
 
 1.) Create a new folder in your project directory called "assets"
 
@@ -61,7 +84,7 @@ To get the latest updates to the base theme, just run the following command:
 3.) Include a link to your custom styles/js in your template, like this: 
     https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
-#### To customize your app's templates:
+### Add custom templates:
 
 1.) Create a new folder in your project directory called "templates."
 		
@@ -95,27 +118,28 @@ templates/
 4.) Note: The layouts (left, right, both, full) extend the original base.html.
 		The original base.html is in your site-packages directory (after you pip install it).
 
-5.) Here is an example of what would go into your app's base.html file:
+#### Here is an example of what would go into your app's base.html file:
     https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
-6.) If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need to
-    make sure your extends path is pointing to your app's base template, like this:
+#### If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need  to make sure your extends path is pointing to your app's base template, like this:
 
 <pre><code>{% extends "your-app/base.html" %}</code></pre>
     
 
-6.) You can find different layouts for your app here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
+#### You can find different layouts for your app here: 
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
            
-#### Utilizing the Django Block System
+### Utilizing the Django Block System
 
 The official Django docs do a good job of explaining how template inheritance works and how to utilize the block system.
 
-https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance
+<pre><code>https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance</code></pre>
 
-Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You
-can also find them listed in the base.html template found here: https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.
+#### Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You can also find them listed in the base.html template found here: 
 
-- {% block head_css %}
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
+
+<pre><code>- {% block head_css %}
 - {% block site_title %}
 - {% block extra_head_top %} 
 - {% block extra_head_bottom %}
@@ -129,7 +153,7 @@ can also find them listed in the base.html template found here: https://github.c
 - {% block mobile_sidebar_nav %}
 - {% block breadcrumb_wrapper %}
 - {% block breadcrumb %}
--	{% block content_wrapper %}
+- {% block content_wrapper %}
 - {% block content %}
 - {% block inner_content %}
 - {% block left_sidebar %}
@@ -138,8 +162,9 @@ can also find them listed in the base.html template found here: https://github.c
 - {% block footer %}
 - {% block footer_js %}
 - {% block extra_footer_js %}
+</code></pre>
 
-#### Initial Test View & Url Configuration
+### Initial Test View & Url Configuration
 
 This is just an example to get your started:
 
@@ -150,7 +175,7 @@ class BaseView(TemplateView):
     #### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
 </code></pre>
     
-And in your urls.py file:
+### And in your urls.py file:
 
 <pre><code>from project.views import BaseView
 
@@ -160,7 +185,11 @@ urlpatterns = patterns('',
 )
 </code></pre>
 
-#### Contributors
+### Using Gulp to automate your front-end workflow 
+
+Included in this repo is an example gulpfile (copied from: http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/). But, if you use Gulp, you will need to add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
+
+### Contributors
 
 Thank you to our contributors!
 
