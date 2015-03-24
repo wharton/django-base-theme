@@ -15,6 +15,7 @@
 	- Examples of different template layout options
 - Utilizing the Django Block System
 	- A list of blocks available with base-theme
+- Adding Django Debug Toolbar
 - Example test view & url configuration
 - Example url.py file
 - Using Gulp to automate your front-end workflow
@@ -163,6 +164,11 @@ The official Django docs do a good job of explaining how template inheritance wo
 - {% block footer_js %}
 - {% block extra_footer_js %}
 </code></pre>
+
+### Adding the Django Debug Toolbar
+
+These Django docs do a good job of explaining how to integrate the toolbar:
+<pre><code>http://django-debug-toolbar.readthedocs.org/en/latest/installation.html</code></pre>
 
 ### Initial Test View & Url Configuration
 
