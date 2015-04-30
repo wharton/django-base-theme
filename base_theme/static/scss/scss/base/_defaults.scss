@@ -24,7 +24,7 @@ html {
 }
 
 p, 
-ul li,
+li,
 li a,
 ol {
 	font-family: $roma;
@@ -33,25 +33,34 @@ ol {
 	@include font-size(18px);
 }
 
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
 li {
-	list-style-type: disc;
+	list-style-type: none;
+	@include smoothing;
 	color: $gray;
 	a {
 		color: $gray;
+		@include smoothing;
 	}
 }
 
-ul {
-	margin-top: 10px;
-	margin-bottom: 10px;
+ul.bullet-list, 
+ol.bullet-list {
+   margin-top: 10px;
+   margin-bottom: 10px;
+	li {
+		list-style-type: disc; 
+	}
 }
 
-#sidebar ul {
-	margin: 0px;
-	li, li a {
-	  list-style-type: none;
-	  @include smoothing;
-  }
+ul.numbered-list,
+ol.numbered-list {
+	li {
+		list-style-type: decimal;
+	}
 }
 
 /* ==========================================================================
