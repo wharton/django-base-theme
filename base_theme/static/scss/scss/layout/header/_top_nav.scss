@@ -26,8 +26,10 @@
 			padding: 2px 8px;
 			@include font-size(11px);
 			font-family: $helv;
-			font-weight: 400;
+			font-weight: 700;
 			color: #fff;
+			font-family: $helv;
+			@include smoothing;
 			&:hover, &:focus {
 				background-color: #3d3d3d;
 			}

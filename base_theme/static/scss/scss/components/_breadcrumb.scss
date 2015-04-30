@@ -42,6 +42,7 @@
 		font-family: $helv;
 	}
 	.active {
+		color: #2d2d2d;
 		@include font-size(13px);
 	}
 }

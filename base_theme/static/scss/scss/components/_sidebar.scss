@@ -20,6 +20,7 @@
 				display: block;
 				padding: 10px 5px 10px 35px;
 				color: #254784;
+				@include font-size(16px);
 				&:hover, &:focus {
 					padding-left: 23px; 
 					color: #000;
@@ -27,7 +28,8 @@
 				}
 				&.current {
 					border-left: 12px solid $red;
-					padding-left:23px; 
+					padding-left:23px;
+					color: #000;
 				}
 			}
 		}

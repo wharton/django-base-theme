@@ -172,8 +172,8 @@
    <div class="row">
      <ol class="breadcrumb">
 	    {% block breadcrumb %}
-        <li><a href="#">Crumb Parent</a></li>
-        <li class="active">Crumb Child</li>
+        <li><a href="#">Parent</a></li>
+        <li class="active">Child</li>
         {% endblock breadcrumb %}
      </ol>
    </div>
@@ -187,7 +187,7 @@
  {% block content_wrapper %}
  <main id="content" role="main">
    {% block content %}
-		<h2 class="visuallyhidden">Main Content</h2>
+		<h1 class="visuallyhidden">Main Content Title</h1>
 		<div class="container">
 		  <div class="row">
 			  {% block left_sidebar %}
@@ -208,19 +208,37 @@
 		    {% endblock left_sidebar %}
 		    {% block inner_content %}
 		    <div class="col-md-9">
-		      <h2>Main Content</h2>
+		      <h1>Main Content Title</h1>
 		      <section id="part-one">
 		        <header class="visuallyhidden">A Main Section</header>
-		        <h4>A Main Section</h4>
+		        <h3>A Main Section</h3>
 		        <div class="alert alert-success" role="alert">
-		          <p>This Starter Kit uses Twitter Bootstrap 3, HTML5 Boilerplate, HTML5, CSS3, SASS/SCSS, jQuery, Modernizer.js, and Respond.js.</p>
-		          <p>Below are just a few style examples (i.e. headers, etc.), but for a full Bootstrap styleguide visit <a href="http://getbootstrap.com/">http://getbootstrap.com</a>
+		          <p>This responsive front-end boilerplate includes:</p>
+			        <p><ul>
+				        <li>Twitter Bootstrap 3</li>
+				        <li>HTML5 Boilerplate</li>
+				        <li>HTML5/CSS3</li>
+				        <li>SASS/SCSS</li>
+				        <li>jQuery</li>
+			          <li>Modernizer.js</li>
+			          <li>Respond.js</li>
+			        </ul></p>
+		          <p>Below are just a few style examples (i.e. headers, etc.), but for a full Bootstrap styleguide visit <a href="http://getbootstrap.com/">http://getbootstrap.com</a></p>
 		          <p>Also, for the official Wharton styleguide visit <a href="http://standards.wharton.upenn.edu/">http://standards.wharton.upenn.edu/</a>
 		          </p>
 		        </div>
 		        <p><b>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin</b>. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some
-		          hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' <a href="#">this is a link - you can click me</a>. In strange contrast
-		          to the
+		          hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees.   
+		          <ul>
+				        <li>Item 1</li>
+				        <li>Item 2</li>
+				        <li>Item 3</li>
+				        <li>Item 4</li>
+				        <li>Item 5</li>
+			          <li>Item 6</li>
+			          <li>Item 7</li>
+			        </ul>
+		They made a sort of temporary servants' <a href="#">this is a link - you can click me</a>. In strange contrast to the...
 		        </p>
 		        <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order
 		          by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
@@ -239,11 +257,10 @@
 		      </section>
 		      <section id="part-two">
 		        <header class="visuallyhidden">A Main Section</header>
-		        <h4>A Main Section</h4>
+		        <h3>A Main Section</h3>
 		        <article>
 		          <h5>Article Post One</h5>
-		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried
-		            order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees. They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the
+		          <p>Now, Ahab and his three mates formed what may be called the first table in the Pequod's cabin. After their departure, taking place in inverted order to their arrival, the canvas cloth was cleared, or rather was restored to some hurried order by the pallid steward. And then the three harpooneers were bidden to the feast, they being its residuary legatees.They made a sort of temporary servants' hall of the high and mighty cabin. In strange contrast to the...
 		          </p>
 		        </article>
 		        <article>

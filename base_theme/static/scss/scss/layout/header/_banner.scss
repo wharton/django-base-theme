@@ -5,20 +5,21 @@
 #banner {
 	.container {
 		@include linear-gradient(#0d2c68,#2e55a4);
-		padding-bottom: 20px;
+		padding-bottom: 17px;
 	}
 	#logo {
-		margin-top: 25px;
+		margin-top: 17px;
 		float: left;
 	}
 	#title {
 		float: left;
 		padding-left: 35px;
-		padding-top: 37px;
+		padding-top: 25px;
 		color: #fff;
 		font-family: $pal;
+		@include smoothing;
 		text-transform: uppercase;
-		@include font-size(20px);
+		@include font-size(24px);
 		@include small {
 			@include font-size(13px);
 		}

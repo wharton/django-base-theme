@@ -7,7 +7,7 @@
 	&.navbar-inverse .navbar-nav > .active > a {
 		background: none;
 		font-family: $helv;
-		border-top: 3px solid $red;
+		border-top: 4px solid $red;
 		@include small {
 			border-top: 0px;
 			}
@@ -41,12 +41,9 @@
 				padding-bottom: 4px;
 				padding-left: 15px;
 				font-family: $helv;
-				-moz-font-smoothing: antialiased;
-				-webkit-font-smoothing: antialiased;
-				font-smoothing: antialiased;
-				text-rendering: optimizeLegibility;
+				@include smoothing;
 				font-weight: 400;
-				@include font-size(14px);
+				@include font-size(15px);
 				color: #fff;
 				border-left: 1px solid #6b87b8;
 				border-right: 1px solid #244b8e;
@@ -60,7 +57,7 @@
 				}
 	  }
 	  li.active a {
-		  padding-top: 1px;
+		  padding-top: 0px;
 		  &:hover, &:focus {
 			  background-color: $red;
 		  }

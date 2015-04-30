@@ -23,16 +23,35 @@ html {
     line-height: 1.4;
 }
 
-li {
-	list-style-type: none;
-}
-
 p, 
 ul li,
+li a,
 ol {
 	font-family: $roma;
 	word-wrap: break-word;
+	@include smoothing;
 	@include font-size(18px);
+}
+
+li {
+	list-style-type: disc;
+	color: $gray;
+	a {
+		color: $gray;
+	}
+}
+
+ul {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sidebar ul {
+	margin: 0px;
+	li, li a {
+	  list-style-type: none;
+	  @include smoothing;
+  }
 }
 
 /* ==========================================================================
@@ -44,6 +63,7 @@ ol {
 	 word-wrap: break-word;
 	 font-weight: normal; 
 	 line-height: 1.1;
+	 @include smoothing;
 }
 
 #{headings()} a {
@@ -125,6 +145,7 @@ a {
 strong, b {
 	color: #1b1b1b;
 	font-family: $roma;
+	@include smoothing;
 }
 
 /* ==========================================================================
@@ -135,7 +156,10 @@ blockquote {
 	font-family: $roma;
 	background-color: #eee;
 	@include border-radius(4px);
-	padding: 30px;
+	padding: 25px;
+	color: $gray;
+	font-style: italic;
+	@include smoothing;
 }
 
 /*

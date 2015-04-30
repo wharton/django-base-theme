@@ -1,5 +1,9 @@
+### Django Base Theme (v1.0)
+- Django Base Theme is a responsive front-end boilerplate designed for Wharton apps.
+- It contains helpful plugins, components and standards to help you get started.
+- It also includes official Wharton branding styles, logos, layouts and fonts.
+
 ### Table of Contents
-- Introduction
 - Components & Standards
 - Quick note
 - Modifying Settings.py
@@ -21,10 +25,6 @@
 - Using Gulp to automate your front-end workflow
 - List of Contributors
 	
-### Introduction
-- A responsive Django-based theme designed for Wharton apps (v1.0).
-- Includes official Wharton branding styles, logos, layouts and fonts.
-
 ### Components & Standards: 
 - Twitter Bootstrap 3
 - Normalize
@@ -50,7 +50,7 @@
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets"),
+    os.path.join(BASE_DIR, "assets"), #### You can also call this static_dev or whatever name you want
 )
 
 TEMPLATE_DIRS = (
@@ -70,20 +70,25 @@ TEMPLATE_DIRS = (
 	
 <pre><code>pip install django-bootstrap3</code></pre>
 
-### Updating Base-Theme
+### Getting the latest Base-Theme Updates
 
 To get the latest updates to the base theme, just run the following command: 
 
 <pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme --upgrade</code></pre>
 
+Or you might have to first do a <pre><code> pip uninstall base-theme</code></pre> and then 
+
+<pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme</code></pre>
+
 ### Add custom stylesheets or javascript
 
-1.) Create a new folder in your project directory called "assets"
+1.) Create a new folder in your project directory called "assets" #### You can also call this static_dev or whatever name you want
 
 2.) Create your custom stylesheets and/or javascript files in the assets folder.
 
-3.) Include a link to your custom styles/js in your template, like this: 
-    https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
+3.) Include a link to your custom styles/js, like the link example in this template:
+    
+<pre><code>https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html</code></pre>
 
 ### Add custom templates:
 
@@ -119,7 +124,7 @@ templates/
 4.) Note: The layouts (left, right, both, full) extend the original base.html.
 		The original base.html is in your site-packages directory (after you pip install it).
 
-#### Here is an example of what would go into your app's base.html file:
+#### In this template is an example of what would go into your app's base.html:
     https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
 
 #### If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need  to make sure your extends path is pointing to your app's base template, like this:
@@ -127,7 +132,7 @@ templates/
 <pre><code>{% extends "your-app/base.html" %}</code></pre>
     
 
-#### You can find different layouts for your app here: 
+#### You can find different layouts for your app in this template: 
 <pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
            
 ### Utilizing the Django Block System
