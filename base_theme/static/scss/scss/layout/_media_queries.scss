@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Max-width: 768px
+   Breaking out these query styles into their own file
    ========================================================================== */
 @media (max-width: 767px) {
   #content {
@@ -26,7 +26,7 @@
 	}
   #banner #title {
 	  padding-left: 20px;
-	  padding-top: 40px;
+	  padding-top: 30px;
 	  @include font-size(22px);
   } 
   #logo {
@@ -77,7 +77,7 @@
 @media (max-width: 680px) {
 	#banner #title {
 	  padding-left: 15px;
-	  padding-top: 38px;
+	  padding-top: 25px;
 	  @include font-size(17px);
   }
 } 
@@ -85,7 +85,7 @@
 @media (max-width: 500px) {
 	 #banner #title {
 	  padding-left: 15px;
-	  padding-top: 35px;
+	  padding-top: 24px;
 	  @include font-size(11px);
  } 
 }  
