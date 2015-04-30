@@ -67,7 +67,7 @@
 
 #search {
 	position: absolute;
-	top: 24px;
+	top: 22px;
 	right: 0px;
 	.input-group {
 		padding: 10px 15px;
@@ -115,6 +115,7 @@ ul.mobile-sm {
 	padding-left: 0px;
 	background-color: #e8e8e8;
 	@include small {
+		margin: 0px;
 		display: block;
 		li {
 			background-color: #e8e8e8;

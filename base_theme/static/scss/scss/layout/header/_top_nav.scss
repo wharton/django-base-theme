@@ -14,6 +14,7 @@
 	}
 	.container {
 		background-color: #000;
+		height: 21px;
 		@include small {
 			padding: 0px;
 		}
@@ -66,7 +67,7 @@
 	position: relative;
 	width: 375px;
 	margin-left: -115px;
-	height: 25px;
+	height: 21px !important;
 	@include small {
 		height: 5px;
 		margin-left: 0px;
@@ -76,6 +77,11 @@
 
 #top-nav .nav.navbar-nav.navbar-right {
 	position: relative;
-	padding-top: 1px;
+	padding-top: 0px;
+	margin-top: -1px;
 	margin-right: -1px;
+}
+
+#glyph-search a {
+	padding: 1px 8px !important;
 }
