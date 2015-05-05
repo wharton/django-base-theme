@@ -1,11 +1,11 @@
 ### Django Base Theme (v1.0)
-- Django Base Theme is a responsive front-end boilerplate designed for Wharton apps.
+- Django Base Theme is a responsive front-end boilerplate designed for Wharton Django/Python apps.
 - It contains helpful plugins, components and standards to help you get started.
 - It also includes official Wharton branding styles, logos, layouts and fonts.
 
 ### Table of Contents
 - Components & Standards
-- Quick note
+- SASS/SCSS Integration
 - Modifying Settings.py
 	- Adding Directories
 	- Adding Installed Apps
@@ -27,7 +27,7 @@
 	
 ### Components & Standards: 
 - Twitter Bootstrap 3
-- Normalize
+- Normalize Reset
 - HTML5 Boilerplate 
 - HTML5 & CSS3
 - Responsive
@@ -37,11 +37,26 @@
 - Respond.js
 - Font Awesome
 - Custom fonts served via Fonts.com
-- Gulp
+- Gulp Workflow Automation
 
-### Quick note on this Guide
+### SASS/SCSS Integration
 
-"Project" refers to the entire application and "app" refers to a submodule of the application.
+This project uses the CSS extension language SASS (it's very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.
+
+SCSS/SASS outputs to CSS via compilers like Compass or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
+
+<pre><code>http://sass-lang.com</code></pre>
+
+Some helpful SASS Mixins included in this theme are:
+
+- REM to px fallback
+- SVG Background-images with PNG and retina fallBack
+- Media Queries utilizing the @content feature
+- Cross Browser Opacity
+
+You can see a full (and growing) list of mixins, variables and other SASS helpers here:
+
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers</code></pre>
 
 ### Modifying Settings.py
 
