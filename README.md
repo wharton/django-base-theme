@@ -81,7 +81,7 @@ TEMPLATE_DIRS = (
 
 ### PIP installation
 
-<pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme</code></pre>
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
 	
 <pre><code>pip install django-bootstrap3</code></pre>
 
@@ -89,11 +89,11 @@ TEMPLATE_DIRS = (
 
 To get the latest updates to the base theme, just run the following command: 
 
-<pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme --upgrade</code></pre>
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme --upgrade</code></pre>
 
 Or you might have to first do a <pre><code> pip uninstall base-theme</code></pre> and then 
 
-<pre><code>pip install git+https://github.com/chadwhitman/Django-Base-Theme</code></pre>
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
 
 ### Add custom stylesheets or javascript
 
@@ -181,6 +181,7 @@ The official Django docs do a good job of explaining how template inheritance wo
 - {% block right_sidebar %}
 - {% block footer_wrapper %}
 - {% block footer %}
+- {% block footer_app_link %}
 - {% block footer_js %}
 - {% block extra_footer_js %}
 </code></pre>
