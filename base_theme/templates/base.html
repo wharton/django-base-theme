@@ -79,20 +79,19 @@
      <li><a href="http://www.wharton.upenn.edu/">Wharton Home</a></li>
      <li><a href="http://www.upenn.edu/">Penn</a></li>
      <li id="glyph-search"><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-     <div id="search">
-       <div class="input-group">
-         <input type="text" value="Search Wharton" class="form-control">
-         <span class="input-group-btn">
-         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
-         </span>
-       </div>
-     </div>
-   </div>
-   <!--/ end row -->
- </div>
- <!--/ end container -->
-</div>
-<!-- end top-nav -->
+     <form action="http://www.wharton.upenn.edu/search/" method="get" name="search">
+		  <div id="search">
+		    <div class="input-group">
+		      <input type="text" value="Search Wharton" class="form-control" name="q">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-arrow-right"></span></button>
+		      </span>
+		    </div>
+		  </div>
+     </form><!--/ end form -->
+   </div><!--/ end row -->
+ </div><!--/ end container -->
+</div><!--/ end top-nav -->
 {% block banner_wrapper %}
 <div id="banner" role="banner">
  <h2 class="visuallyhidden">Banner</h2>
@@ -102,12 +101,9 @@
      	<img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo">
      {% endblock header_logo %}
      {% block banner_title %}<div id="title">Wharton Computing</div>{% endblock banner_title %}
-   </div>
-   <!--/ end row -->
- </div>
- <!--/ end container -->
-</div>
-<!--/ end banner -->
+   </div><!--/ end row -->
+ </div><!--/ end container -->
+</div><!--/ end banner -->
 {% endblock banner_wrapper %}
 
 {% block main_nav_wrapper %}
@@ -146,23 +142,21 @@
           	{% endblock mobile_sidebar_nav %}
           {% endblock main_nav %}
        </ul>
-     </div>
-     <!--/ end nav-collapse -->
+     </div><!--/ end nav-collapse -->
      <div id="search-option"><a href="#"><span class="glyphicon glyphicon-search"></span></a></div>
-     <div id="search">
-       <div class="input-group">
-         <input type="text" value="Search Wharton" class="form-control">
-         <span class="input-group-btn">
-         <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-arrow-right"></span></button>
-         </span>
-       </div>
-       <!-- /end input-group -->
-     </div>
-   </div>
- </div>
- <!-- /end container -->
-</nav>
-<!-- /end main-nav -->
+     <form action="http://www.wharton.upenn.edu/search/" method="get" name="search">
+		  <div id="search">
+		    <div class="input-group">
+		      <input type="text" value="Search Wharton" class="form-control" name="q">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-arrow-right"></span></button>
+		      </span>
+		    </div>
+		  </div>
+     </form><!--/ end form -->
+   </div><!--/ end row -->
+ </div><!--/ end container -->
+</nav><!--/ end main-nav -->
 {% endblock main_nav_wrapper %}
 
 {% block breadcrumb_wrapper %}
@@ -181,7 +175,7 @@
 </div>
 {% endblock breadcrumb_wrapper %}
 {% endblock header %}
-</header><!-- /end header -->
+</header><!--/ end header -->
 {% endblock header_wrapper %}
 
  {% block content_wrapper %}
@@ -270,13 +264,10 @@
 		          </p>
 		        </article>
 		      </section>
-		    </div>
-		    <!-- end col-md-9 -->
+		    </div><!-- end col-md-9 -->
 		    {% endblock inner_content %}
-		  </div>
-		  <!--/ end row -->
-		</div>
-		<!--/ end container -->
+		  </div><!--/ end row -->
+		</div><!--/ end container -->
    {% endblock content %}
  </main><!--/ end main content -->
  {% endblock content_wrapper %}
@@ -323,7 +314,7 @@
 		  </div>
 	  	<div class="col-md-2 social">
 				<ul class="social-icons"><li class="facebook-icon"><a href="https://www.facebook.com/WhartonSchool"><img src="{% static "img/social/facebook-icon.png" %}" width="29" height="29" alt="Facebook"></a></li><li class="twitter-icon"><a href="https://www.twitter.com/wharton"><img src="{% static "img/social/twitter-icon.png" %}" width="29" height="29" alt="Twitter"></a></li><li class="googleplus-icon"><a href="https://plus.google.com/+wharton/posts"><img src="{% static "img/social/googleplus-icon.png" %}" width="29" height="29" alt="Google+"></a></li><li class="youtube-icon"><a href="https://www.youtube.com/user/thewhartonschool"><img src="{% static "img/social/youtube-icon.png" %}" width="29" height="29" alt="YouTube"></a></li><li class="flickr-icon"><a href="https://www.flickr.com/photos/thewhartonschool/"><img src="{% static "img/social/flickr-icon.png" %}" width="29" height="29" alt="Flickr"></a></li></ul>
-				<!-- .social-icons -->	
+				<!--/ end .social-icons -->	
 				<div id="knowledge">
 					<a href="http://knowledge.wharton.upenn.edu/">
 						<img src="{% static "img/footer/knowledge-for.png" %}"/>
