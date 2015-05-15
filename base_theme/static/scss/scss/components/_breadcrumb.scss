@@ -21,6 +21,10 @@
 	}
 }
 
+.breadcrumb > li {
+	letter-spacing: .15em;
+}
+
 #breadcrumb {
 	ol li:first-child {
 		text-transform: uppercase;
@@ -43,10 +47,12 @@
 	}
 	.active {
 		color: #2d2d2d;
+		letter-spacing: 0em;
 		@include font-size(13px);
 	}
 }
 
-.breadcrumb>.active {
+.breadcrumb > .active {
 	color: #2d2d2d;
+	letter-spacing: 0em;
 }
