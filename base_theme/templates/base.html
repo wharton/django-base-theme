@@ -99,9 +99,9 @@
  <div class="container">
    <div class="row">
 	   {% block header_logo %}
-     	<img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo">
+     	<a href="http://www.wharton.upenn.edu/"><img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo"></a>
      {% endblock header_logo %}
-     {% block banner_title %}<div id="title">Wharton Computing</div>{% endblock banner_title %}
+     <a href="/">{% block banner_title %}<div id="title">Wharton Computing</div>{% endblock banner_title %}</a>
    </div><!--/ end row -->
  </div><!--/ end container -->
 </div><!--/ end banner -->
