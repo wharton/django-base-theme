@@ -55,3 +55,6 @@ htmlcov/
 
 # Sass Files
 *.sass-cache
+
+# Code Kit
+config.codekit

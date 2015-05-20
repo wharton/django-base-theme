@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h3 id="djangobasetheme">Django Base Theme</h3>
+
+<ul>
+<li>Django Base Theme is a responsive front-end boilerplate designed for Wharton Django/Python apps.</li>
+<li>It contains helpful plugins, components and standards to help you get started.</li>
+<li>It also includes official Wharton branding styles, logos, layouts and fonts.</li>
+</ul>
+
+<h3 id="tableofcontents">Table of Contents</h3>
+
+<ul>
+<li>Components &amp; Standards</li>
+<li>SASS/SCSS Integration</li>
+<li>Modifying Settings.py
+
+<ul>
+<li>Adding Directories</li>
+<li>Adding Installed Apps</li>
+</ul></li>
+<li>PIP installation</li>
+<li>Updating Base-Theme</li>
+<li>Adding custom stylesheets/javascript</li>
+<li>Adding custom templates
+
+<ul>
+<li>Example breakdown of static file organization</li>
+<li>Example of base.html file</li>
+<li>Example of extending your app&#8217;s base file</li>
+<li>Examples of different template layout options</li>
+</ul></li>
+<li>Utilizing the Django Block System
+
+<ul>
+<li>A list of blocks available with base-theme</li>
+</ul></li>
+<li>Adding Django Debug Toolbar</li>
+<li>Example test view &amp; url configuration</li>
+<li>Example url.py file</li>
+<li>Using Gulp to automate your front-end workflow</li>
+<li>List of Contributors</li>
+</ul>
+
+<h3 id="componentsstandards:">Components &amp; Standards:</h3>
+
+<ul>
+<li>Twitter Bootstrap 3</li>
+<li>Normalize Reset</li>
+<li>HTML5 Boilerplate</li>
+<li>HTML5 &amp; CSS3</li>
+<li>Responsive</li>
+<li>SASS/SCSS</li>
+<li>jQuery</li>
+<li>Modernizer.js</li>
+<li>Respond.js</li>
+<li>Font Awesome</li>
+<li>Custom fonts served via Fonts.com</li>
+<li>Gulp Workflow Automation</li>
+</ul>
+
+<h3 id="sassscssintegration">SASS/SCSS Integration</h3>
+
+<p>This project uses the CSS extension language SASS (it&#8217;s very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.</p>
+
+<p>SCSS/SASS outputs to CSS via compilers like Compass, Libsass, or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: </p>
+
+<pre><code>http://sass-lang.com</code></pre>
+
+<p>Some helpful SASS Mixins included in this theme are:</p>
+
+<ul>
+<li>REM to px fallback</li>
+<li>SVG Background-images with PNG and retina fallBack</li>
+<li>You can see a full (and growing) list of mixins, variables and other SASS helpers here:</li>
+</ul>
+
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers</code></pre>
+
+<h3 id="modifyingsettings.py">Modifying Settings.py</h3>
+
+<h4 id="addthefollowingtothebottomofyoursettings.pyfile:">Add the following to the bottom of your settings.py file:</h4>
+
+<pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "assets"), #### You can also call this static_dev or whatever name you want
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+</code></pre>
+
+<h4 id="addthefollowingtotheinstalled_appssection:">Add the following to the &#8216;Installed_Apps&#8217; section:</h4>
+
+<pre><code>'bootstrap3',
+'base_theme',
+</code></pre>
+
+<h3 id="pipinstallation">PIP installation</h3>
+
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
+
+<pre><code>pip install django-bootstrap3</code></pre>
+
+<h3 id="gettingthelatestbase-themeupdates">Getting the latest Base-Theme Updates</h3>
+
+<p>To get the latest updates to the base theme, just run the following command: </p>
+
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme --upgrade</code></pre>
+
+<p>Or you might have to first do a <pre><code> pip uninstall base-theme</code></pre> and then </p>
+
+<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
+
+<h3 id="addcustomstylesheetsorjavascript">Add custom stylesheets or javascript</h3>
+
+<p>1.) Create a new folder in your project directory called &#8220;assets&#8221; #### You can also call this static_dev or whatever name you want</p>
+
+<p>2.) Create your custom stylesheets and/or javascript files in the assets folder.</p>
+
+<p>3.) Include a link to your custom styles/js, like the link example in this template:</p>
+
+<pre><code>https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html</code></pre>
+
+<h3 id="addcustomtemplates:">Add custom templates:</h3>
+
+<p>1.) Create a new folder in your project directory called &#8220;templates.&#8221;</p>
+
+<p>2.) Create a directory within &#8220;templates&#8221; for your app and call it the name of your app.
+ So, if your app is &#8220;polls,&#8221; your folder would be called &#8220;polls.&#8221;</p>
+
+<p>3.) Within that app folder, create a template called &#8220;base.html.&#8221; You must have this file in your app directory.</p>
+
+<h4 id="belowisanexamplebreakdownforcustomtemplatesandotherstaticfiles:">Below is an example breakdown for custom templates and other static files:</h4>
+
+<pre><code>project/
+        manage.py
+project/
+        settings.py
+        urls.py
+your-app/
+        models.py
+        views.py
+assets/
+         styles.css #### Your custom styles here.
+         scripts.js #### Your custom js here.
+templates/
+     your-app/ #### same name as your app
+           base.html #### Your base extends one of the layout templates.
+            i.e. {% extends "left_sidebar.html" %}
+           list.html #### Your other templates can extend from your app's base template
+            i.e. {% extends "your-app/base.html" %}
+           detail.html
+</code></pre>
+
+<p>4.) Note: The layouts (left, right, both, full) extend the original base.html.
+ The original base.html is in your site-packages directory (after you pip install it).</p>
+
+<h4 id="inthistemplateisanexampleofwhatwouldgointoyourappsbase.html:">In this template is an example of what would go into your app&#8217;s base.html:</h4>
+
+<pre><code>https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
+</code></pre>
+
+<h4 id="ifyouwantedtoextendyourappsbase.htmlintosayyourappslist.htmltemplateyouwouldjustneedtomakesureyourextendspathispointingtoyourappsbasetemplatelikethis:">If you wanted to extend your app&#8217;s base.html into, say, your app&#8217;s list.html template, you would just need to make sure your extends path is pointing to your app&#8217;s base template, like this:</h4>
+
+<pre><code>{% extends "your-app/base.html" %}</code></pre>
+
+<h4 id="youcanfinddifferentlayoutsforyourappinthistemplate:">You can find different layouts for your app in this template:</h4>
+
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
+
+<h3 id="utilizingthedjangoblocksystem">Utilizing the Django Block System</h3>
+
+<p>The official Django docs do a good job of explaining how template inheritance works and how to utilize the block system.</p>
+
+<pre><code>https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance</code></pre>
+
+<h4 id="hereisalistofblocksincludedinthedjangobasethemethatyoucanusetocustomizeyourowntemplateasneeded.youcanalsofindthemlistedinthebase.htmltemplatefoundhere:">Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You can also find them listed in the base.html template found here:</h4>
+
+<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
+
+<pre><code>- {% block head_css %}
+- {% block site_title %}
+- {% block extra_head_top %} 
+- {% block extra_head_bottom %}
+- {% block header_wrapper %}
+- {% block header %}
+- {% block banner_wrapper %}
+- {% block banner_logo %}
+- {% block banner_title %}
+- {% block main_nav_wrapper %}
+- {% block main_nav %}
+- {% block mobile_sidebar_nav %}
+- {% block breadcrumb_wrapper %}
+- {% block breadcrumb %}
+- {% block content_wrapper %}
+- {% block content %}
+- {% block inner_content %}
+- {% block left_sidebar %}
+- {% block right_sidebar %}
+- {% block footer_wrapper %}
+- {% block footer %}
+- {% block footer_app_link %}
+- {% block footer_js %}
+- {% block extra_footer_js %}
+</code></pre>
+
+<h3 id="addingthedjangodebugtoolbar">Adding the Django Debug Toolbar</h3>
+
+<p>These Django docs do a good job of explaining how to integrate the toolbar:
+<pre><code>http://django-debug-toolbar.readthedocs.org/en/latest/installation.html</code></pre></p>
+
+<h3 id="initialtestviewurlconfiguration">Initial Test View &amp; Url Configuration</h3>
+
+<p>This is just an example to get your started:</p>
+
+<pre><code>from django.views.generic import TemplateView
+
+class BaseView(TemplateView):
+    template_name = "your_app/base.html" 
+    #### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
+</code></pre>
+
+<h3 id="andinyoururls.pyfile:">And in your urls.py file:</h3>
+
+<pre><code>from project.views import BaseView
+
+urlpatterns = patterns('',
+    url(r'^$', BaseView.as_view()),
+    url(r'^admin/', include(admin.site.urls)),
+)
+</code></pre>
+
+<h3 id="usinggulptoautomateyourfront-endworkflow">Using Gulp to automate your front-end workflow</h3>
+
+<p>Included in this repo is an example gulpfile (copied from: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys&#8217; Front-end Guide</a>). But, if you use Gulp, you will need to manually add it to your project&#8217;s root directory. For more info on how to use Gulp go here: http://gulpjs.com.</p>
+
+<h3 id="contributors">Contributors</h3>
+
+<p>Thank you to our contributors!</p>
+
+<ul>
+<li>Chad Whitman https://github.com/chadwhitman</li>
+<li>Tim Allen https://github.com/flipperpa</li>
+<li>Frank Wiles https://github.com/frankwiles</li>
+</ul>
+
+</body>
+</html>

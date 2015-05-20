@@ -1,4 +1,4 @@
-### Django Base Theme (v1.0)
+### Django Base Theme
 - Django Base Theme is a responsive front-end boilerplate designed for Wharton Django/Python apps.
 - It contains helpful plugins, components and standards to help you get started.
 - It also includes official Wharton branding styles, logos, layouts and fonts.
@@ -43,7 +43,7 @@
 
 This project uses the CSS extension language SASS (it's very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.
 
-SCSS/SASS outputs to CSS via compilers like Compass or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
+SCSS/SASS outputs to CSS via compilers like Compass, Libsass, or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
 
 <pre><code>http://sass-lang.com</code></pre>
 
@@ -51,10 +51,7 @@ Some helpful SASS Mixins included in this theme are:
 
 - REM to px fallback
 - SVG Background-images with PNG and retina fallBack
-- Media Queries utilizing the @content feature
-- Cross Browser Opacity
-
-You can see a full (and growing) list of mixins, variables and other SASS helpers here:
+- You can see a full (and growing) list of mixins, variables and other SASS helpers here:
 
 <pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers</code></pre>
 
@@ -214,7 +211,7 @@ urlpatterns = patterns('',
 
 ### Using Gulp to automate your front-end workflow 
 
-Included in this repo is an example gulpfile (copied from: http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/). But, if you use Gulp, you will need to manually add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
+Included in this repo is an example gulpfile (copied from: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). But, if you use Gulp, you will need to manually add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
 
 ### Contributors
 
