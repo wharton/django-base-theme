@@ -43,7 +43,7 @@
 
 This project uses the CSS extension language SASS (it's very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.
 
-SCSS/SASS outputs to CSS via compilers like Compass, Libsass, or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
+SCSS/SASS outputs to CSS via compilers like Compass, Libsass, CodeKit or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
 
 <pre><code>http://sass-lang.com</code></pre>
 
@@ -157,9 +157,12 @@ The official Django docs do a good job of explaining how template inheritance wo
 
 <pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
 
-<pre><code>- {% block head_css %}
-- {% block site_title %}
-- {% block extra_head_top %} 
+<pre><code>- {% block site_title %} 
+- {% block extra_head_top %}
+- {% block fast_fonts %}
+- {% block head_css %}
+- {% block css_min %}
+- {% block font_awesome %}
 - {% block extra_head_bottom %}
 - {% block header_wrapper %}
 - {% block header %}
@@ -204,7 +207,7 @@ class BaseView(TemplateView):
 <pre><code>from project.views import BaseView
 
 urlpatterns = patterns('',
-    url(r'^$', BaseView.as_view()),
+    url(r'^$', BaseView.as_view(), name='home'),
     url(r'^admin/', include(admin.site.urls)),
 )
 </code></pre>
