@@ -1,7 +1,7 @@
 ### Django Base Theme
-- Django Base Theme is a responsive front-end boilerplate designed for Wharton Django/Python apps.
+- Django Base Theme is a responsive front-end boilerplate designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
 - It contains helpful plugins, components and standards to help you get started.
-- It also includes official Wharton branding styles, logos, layouts and fonts.
+- It also includes <a href="http://standards.wharton.upenn.edu">official Wharton branding styles, logos, layouts and fonts</a>.
 
 ### Table of Contents
 - Components & Standards
@@ -12,8 +12,8 @@
 - PIP installation
 - Updating Base-Theme
 - Adding custom stylesheets/javascript
-- Adding custom templates
-	- Example breakdown of static file organization
+- Custom templates and other static files
+	- Example directory structure
 	- Example of base.html file
 	- Example of extending your app's base file
 	- Examples of different template layout options
@@ -26,34 +26,31 @@
 - List of Contributors
 	
 ### Components & Standards: 
-- Twitter Bootstrap 3
-- Normalize Reset
-- HTML5 Boilerplate 
+
+- <a href="http://getbootstrap.com">Twitter Bootstrap 3</a>
+- <a href="http://necolas.github.io/normalize.css">Normalize Reset</a>
+- <a href="https://html5boilerplate.com">HTML5 Boilerplate</a>
 - HTML5 & CSS3
 - Responsive
-- SASS/SCSS
-- jQuery
-- Modernizer.js
-- Respond.js
-- Font Awesome
-- Custom fonts served via Fonts.com
-- Gulp Workflow Automation
+- <a href="http://sass-lang.com">SASS/SCSS</a>
+- <a href="https://jquery.com">jQuery</a>
+- <a href="http://modernizr.com">Modernizer.js</a>
+- <a href="https://github.com/scottjehl/Respond">Respond.js</a>
+- <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>
+- <a href="http://www.fonts.com">Custom fonts served via Fonts.com</a>
+- <a href="http://gulpjs.com">Gulp Workflow Automation</a>
 
 ### SASS/SCSS Integration
 
-This project uses the CSS extension language SASS (it's very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.
+This project uses the CSS extension language SASS (it's very similar to <a href="http://lesscss.org">LESS</a> for those familiar with LESS). SASS adds power and organization to your stylesheets.
 
-SCSS/SASS outputs to CSS via compilers like Compass, Libsass, CodeKit or Gulp (we use Gulp, see below to learn more about Gulp). To learn more about SASS go here: 
-
-<pre><code>http://sass-lang.com</code></pre>
+SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">Compass</a>, <a href="http://libsass.org">LibSass</a>, <a href="https://incident57.com/codekit">CodeKit</a> or <a href="http://gulpjs.com">Gulp</a>.<a href="http://sass-lang.com"> Learn more about SASS/SCSS</a>. 
 
 Some helpful SASS Mixins included in this theme are:
 
 - REM to px fallback
 - SVG Background-images with PNG and retina fallBack
-- You can see a full (and growing) list of mixins, variables and other SASS helpers here:
-
-<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers</code></pre>
+- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers">here</a>.
 
 ### Modifying Settings.py
 
@@ -88,21 +85,15 @@ To get the latest updates to the base theme, just run the following command:
 
 <pre><code>pip install git+https://github.com/wharton/Django-Base-Theme --upgrade</code></pre>
 
-Or you might have to first do a <pre><code> pip uninstall base-theme</code></pre> and then 
-
-<pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
-
 ### Add custom stylesheets or javascript
 
-1.) Create a new folder in your project directory called "assets" #### You can also call this static_dev or whatever name you want
+1.) Create a new folder in your project directory called "assets." You can also call this "static_dev" or whatever name you want.
 
 2.) Create your custom stylesheets and/or javascript files in the assets folder.
 
-3.) Include a link to your custom styles/js, like the link example in this template:
+3.) Include a link to your custom styles/js. <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html">Here is an example</a>.
     
-<pre><code>https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html</code></pre>
-
-### Add custom templates:
+### Custom templates and other static files:
 
 1.) Create a new folder in your project directory called "templates."
 		
@@ -111,7 +102,7 @@ Or you might have to first do a <pre><code> pip uninstall base-theme</code></pre
 
 3.) Within that app folder, create a template called "base.html." You must have this file in your app directory.
 
-#### Below is an example breakdown for custom templates and other static files:
+4.) Example directory structure:
 
 <pre><code>project/
 		manage.py
@@ -133,29 +124,22 @@ templates/
            detail.html
 </code></pre>
 
-4.) Note: The layouts (left, right, both, full) extend the original base.html.
-		The original base.html is in your site-packages directory (after you pip install it).
+5.) Note: The layouts (left, right, both, full) extend the original base.html.
+		The original base.html will be in your site-packages directory after you pip install it.
 
-#### In this template is an example of what would go into your app's base.html:
-    https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html
-
-#### If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need  to make sure your extends path is pointing to your app's base template, like this:
+6.) <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/your_app/base.html">Here is an example of what would go into your app's base.html</a>.
+    
+7.) If you wanted to extend your app's base.html into, say, your app's list.html template, you would just need to make sure your extends path is pointing to your app's base template, like this:
 
 <pre><code>{% extends "your-app/base.html" %}</code></pre>
     
-
-#### You can find different layouts for your app in this template: 
-<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
+8.) You can find different layouts for your app <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/templates">here</a>.  
            
 ### Utilizing the Django Block System
 
-The official Django docs do a good job of explaining how template inheritance works and how to utilize the block system.
+The <a href="https://docs.djangoproject.com/en/1.8/topics/templates/#template-inheritance">official Django docs</a> do a good job of explaining how template inheritance works and how to utilize the block system.
 
-<pre><code>https://docs.djangoproject.com/en/dev/topics/templates/#template-inheritance</code></pre>
-
-#### Here is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You can also find them listed in the base.html template found here: 
-
-<pre><code>https://github.com/wharton/django-base-theme/tree/master/base_theme/templates.</code></pre>
+#### The following is a list of blocks included in the Django Base Theme that you can use to customize your own template as needed. You can also find them listed in the original base.html template <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/templates/base.html">here</a>. 
 
 <pre><code>- {% block site_title %} 
 - {% block extra_head_top %}
@@ -188,8 +172,7 @@ The official Django docs do a good job of explaining how template inheritance wo
 
 ### Adding the Django Debug Toolbar
 
-These Django docs do a good job of explaining how to integrate the toolbar:
-<pre><code>http://django-debug-toolbar.readthedocs.org/en/latest/installation.html</code></pre>
+The <a href="http://django-debug-toolbar.readthedocs.org/en/latest/installation.html">official Django docs</a> do a good job of explaining how to integrate the toolbar.
 
 ### Initial Test View & Url Configuration
 
@@ -214,7 +197,7 @@ urlpatterns = patterns('',
 
 ### Using Gulp to automate your front-end workflow 
 
-Included in this repo is an example gulpfile (copied from: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). But, if you use Gulp, you will need to manually add it to your project's root directory. For more info on how to use Gulp go here: http://gulpjs.com.
+Included in this repo is an example gulpfile (copied from: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). But, if you use Gulp, you will need to manually add it to your project's root directory. For more info on how to use Gulp go here: <a href="http://gulpjs.com">http://gulpjs.com</a>.
 
 ### Contributors
 
