@@ -26,6 +26,9 @@
     {% block css_min %}
       <link href="{% static "base_theme/scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
     {% endblock css_min %}
+    {% block font_awesome %}
+      {% fontawesome_stylesheet %}
+    {% endblock font_awesome %}
   {% endblock head_css %}
   <!-- Place modernizer.js inside <head> -->
   <script src="{% static "base_theme/js/vendor/modernizr.min.js" %}"></script>
