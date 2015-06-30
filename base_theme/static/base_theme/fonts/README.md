@@ -1,0 +1,2 @@
+- Fonts served via Fonts.com
+- Font Awesome is include via Django-Fontawesome (https://github.com/redouane/django-fontawesome)

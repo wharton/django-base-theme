@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load bootstrap3 %}
+{% load fontawesome %}
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
@@ -11,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="{% static "favicon.ico" %}">
+  <link rel="icon" href="{% static "base_theme/favicon.ico" %}">
   <title>{% block site_title %}Wharton Shoutouts{% endblock site_title %}</title>
   {% block extra_head_top %}{% endblock extra_head_top %}
   <!-- Fonts served via Fast.Fonts -->
@@ -23,16 +24,13 @@
   <!-- Custom Styles -->
   {% block head_css %}
     {% block css_min %}
-      <link href="{% static "scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
+      <link href="{% static "base_theme/scss/compiled_css/all.css" %}" rel="stylesheet" type="text/css">
     {% endblock css_min %}
-    {% block font_awesome %}
-      <link href="{% static "fonts/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
-    {% endblock font_awesome %}
   {% endblock head_css %}
   <!-- Place modernizer.js inside <head> -->
-  <script src="{% static "js/vendor/modernizr.min.js" %}"></script>
+  <script src="{% static "base_theme/js/vendor/modernizr.min.js" %}"></script>
   <!--[if lt IE 9]>
-   <script src="{% static "js/vendor/respond.min.js" %}"></script>
+   <script src="{% static "base_theme/js/vendor/respond.min.js" %}"></script>
   <![endif]-->
   {% block extra_head_bottom %}{% endblock extra_head_bottom %}
 </head>
@@ -104,7 +102,7 @@
  <div class="container">
    <div class="row">
 	   {% block header_logo %}
-     	<a href="http://www.wharton.upenn.edu/"><img id="logo" src="{% static "img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo"></a>
+     	<a href="http://www.wharton.upenn.edu/"><img id="logo" src="{% static "base_theme/img/logo/UPenn-Wharton-Logo.png" %}" width="218" height="56" alt="Wharton Logo"></a>
      {% endblock header_logo %}
      <a href={% url 'home' %}>{% block banner_title %}<div id="title">Wharton Computing</div>{% endblock banner_title %}</a>
    </div><!--/ end row -->
@@ -319,11 +317,11 @@
 		      </ul>
 		  </div>
 	  	<div class="col-md-2 social">
-				<ul class="social-icons"><li class="facebook-icon"><a href="https://www.facebook.com/WhartonSchool"><img src="{% static "img/social/facebook-icon.png" %}" width="29" height="29" alt="Facebook"></a></li><li class="twitter-icon"><a href="https://www.twitter.com/wharton"><img src="{% static "img/social/twitter-icon.png" %}" width="29" height="29" alt="Twitter"></a></li><li class="googleplus-icon"><a href="https://plus.google.com/+wharton/posts"><img src="{% static "img/social/googleplus-icon.png" %}" width="29" height="29" alt="Google+"></a></li><li class="youtube-icon"><a href="https://www.youtube.com/user/thewhartonschool"><img src="{% static "img/social/youtube-icon.png" %}" width="29" height="29" alt="YouTube"></a></li><li class="flickr-icon"><a href="https://www.flickr.com/photos/thewhartonschool/"><img src="{% static "img/social/flickr-icon.png" %}" width="29" height="29" alt="Flickr"></a></li></ul>
+				<ul class="social-icons"><li class="facebook-icon"><a href="https://www.facebook.com/WhartonSchool"><img src="{% static "base_theme/img/social/facebook-icon.png" %}" width="29" height="29" alt="Facebook"></a></li><li class="twitter-icon"><a href="https://www.twitter.com/wharton"><img src="{% static "base_theme/img/social/twitter-icon.png" %}" width="29" height="29" alt="Twitter"></a></li><li class="googleplus-icon"><a href="https://plus.google.com/+wharton/posts"><img src="{% static "base_theme/img/social/googleplus-icon.png" %}" width="29" height="29" alt="Google+"></a></li><li class="youtube-icon"><a href="https://www.youtube.com/user/thewhartonschool"><img src="{% static "base_theme/img/social/youtube-icon.png" %}" width="29" height="29" alt="YouTube"></a></li><li class="flickr-icon"><a href="https://www.flickr.com/photos/thewhartonschool/"><img src="{% static "base_theme/img/social/flickr-icon.png" %}" width="29" height="29" alt="Flickr"></a></li></ul>
 				<!--/ end .social-icons -->	
 				<div id="knowledge">
 					<a href="http://knowledge.wharton.upenn.edu/">
-						<img src="{% static "img/footer/knowledge-for.png" %}"/>
+						<img src="{% static "base_theme/img/footer/knowledge-for.png" %}"/>
 					</a>
 				</div>
 			</div>
@@ -337,7 +335,7 @@
 	   </ul>
 	 </div>
 	 <div class="row copyright">
-	   <a href="http://www.upenn.edu"><img src="{% static "img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
+	   <a href="http://www.upenn.edu"><img src="{% static "base_theme/img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
 	   <p>&copy; {% now "Y" %} <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a>{% block footer_app_link %}<span class="mba">|<a href={% url 'home' %}>Your App Name Here</a></span>{% endblock footer_app_link %}</p>
 	 </div>
 	</div><!--/ end container -->
@@ -349,9 +347,9 @@
   <!-- Core JS
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="{% static "js/vendor/jquery.min.js" %}"></script>
-  <script src="{% static "js/bootstrap.min.js" %}"></script>
-  <script src="{% static "js/all.min.js" %}"></script>
+  <script src="{% static "base_theme/js/vendor/jquery.min.js" %}"></script>
+  {% bootstrap_javascript %}
+  <script src="{% static "base_theme/js/all.min.js" %}"></script>
   {% endblock footer_js %}
   {% block extra_footer_js %}{% endblock extra_footer_js %}
 </body>

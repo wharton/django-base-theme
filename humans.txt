@@ -3,10 +3,10 @@
 
 # TEAM
 
-    Wharton Computing & Information Technology
+     The Wharton School of Business - Computing & Information Technology
 
 # PROJECT INFO
 
     Title: Django Base Theme
     Version: 1.0
-    Components/Standards: HTML5, CSS3, SASS/SCSS, Twitter Bootstrap, HTML5 Boilerplate, Normalize.css, jQuery, Modernizr, respond.js
+    Components/Standards: HTML5, CSS3, SASS/SCSS, Twitter Bootstrap, HTML5 Boilerplate, Normalize.css, jQuery, Modernizr, respond.js, Gulp, Font Awesome
