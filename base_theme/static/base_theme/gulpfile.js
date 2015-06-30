@@ -15,7 +15,7 @@ var gzip_options = {
 
 /* Compile Our Sass */
 gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
+    return gulp.src('base_theme/scss/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('assets'))
         .pipe(rename({suffix: '.min'}))
@@ -29,7 +29,7 @@ gulp.task('sass', function() {
 /* Watch Files For Changes */
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('base_theme/scss/*.scss', ['sass']);
 
     /* Trigger a live reload on any Django template changes */
     gulp.watch('**/templates/*').on('change', livereload.changed);
