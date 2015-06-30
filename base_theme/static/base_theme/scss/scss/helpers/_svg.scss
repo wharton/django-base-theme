@@ -3,7 +3,7 @@
    Example usage: @include background-image('pattern');
    ========================================================================== */
    
-$image-path: '../../../static/img/bg' !default;
+$image-path: '../../../base_theme/static/img/bg' !default;
 $fallback-extension: 'png' !default;
 $retina-suffix: '@2x';
 @mixin background-image($name, $size:false){

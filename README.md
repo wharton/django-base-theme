@@ -71,6 +71,7 @@ TEMPLATE_DIRS = (
 
 <pre><code>'bootstrap3',
 'base_theme',
+'fontawesome',
 </code></pre>
 
 ### PIP installation
