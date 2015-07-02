@@ -50,7 +50,7 @@ Some helpful SASS Mixins included in this theme are:
 
 - REM to px fallback
 - SVG Background-images with PNG and retina fallBack
-- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/scss/scss/helpers">here</a>.
+- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers">here</a>.
 
 ### Modifying Settings.py
 
@@ -79,6 +79,8 @@ TEMPLATE_DIRS = (
 <pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
 	
 <pre><code>pip install django-bootstrap3</code></pre>
+
+<pre><code>pip install django-fontawesome</code></pre>
 
 ### Getting the latest Base-Theme Updates
 
@@ -198,7 +200,7 @@ urlpatterns = patterns('',
 
 ### Using Gulp to automate your front-end workflow 
 
-Included in this repo is an <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/static/gulpfile.js">example gulpfile</a> (based on: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). If you use Gulp, you will need to manually add it to your root directory and customize it to your project's needs. For more info on how to use Gulp go here: <a href="http://gulpjs.com">http://gulpjs.com</a>.
+Included in this repo is an <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/static/base_theme/gulpfile.js">example gulpfile</a> (based on: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). If you use Gulp, you will need to manually add it to your root directory and customize it to your project's needs. For more info on how to use Gulp go here: <a href="http://gulpjs.com">http://gulpjs.com</a>.
 
 ### Contributors
 
