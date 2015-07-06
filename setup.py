@@ -35,6 +35,10 @@ setup(
         'static/base_theme/scss/config.rb',
     ]},
     include_package_data=True,
+    install_requires=[
+        'django-fontawesome==0.2.2',
+        'django-bootstrap3==4.11.0',
+    ],
     license='BSD License',
     description="A responsive base theme for Wharton Django applications.",
     url='https://github.com/wharton/django-base-theme/',
