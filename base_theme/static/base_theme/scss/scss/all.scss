@@ -1,25 +1,52 @@
-/* Reset */
-/* Bootstrap includes Normalize.css */
+/*****
+ * TABLE OF CONTENTS
+ *
+ * ALL IMPORTS
+ *    - Bootstrap includes Normalize.css
+ *    - reset
+ *    - helpers
+ *    - defaults
+ *    - modules
+ *    - layout
+ *    - state
+ *****/
 
-/* Helpers */
-@import 'helpers/font_families';
-@import 'helpers/font_colors';
-@import 'helpers/general_mixins';
-@import 'helpers/svg';
 
-/* Base */
+/*------------------------------------*\
+    #HELPERS
+\*------------------------------------*/
+
+@import 'helpers/fonts/font_families';
+@import 'helpers/fonts/font_colors';
+@import 'helpers/functions/general_mixins';
+@import 'helpers/images/svg';
+
+/*------------------------------------*\
+    #DEFAULTS
+\*------------------------------------*/
+
 @import 'base/defaults';
 
-/* Components */
-/* @import 'components/sticky_footer'; */
-@import 'components/print';
-@import 'components/admin';
-@import 'components/sidebar';
-@import 'components/breadcrumb';
+/*------------------------------------*\
+    #MODULES
+\*------------------------------------*/
 
-/* Layout */
+@import 'modules/print';
+@import 'modules/admin';
+@import 'modules/footer/sticky_footer';
+@import 'modules/header/navigation/top_nav';
+@import 'modules/header/navigation/main_nav';
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+@import 'layout/header/breadcrumb';
 @import 'layout/header/banner';
-@import 'layout/header/top_nav';
-@import 'layout/header/main_nav';
-@import 'layout/footer';
-@import 'layout/media_queries';
+@import 'layout/sidebar/sidebar';
+@import 'layout/footer/footer';
+
+/*------------------------------------*\
+    #STATE
+\*------------------------------------*/
+
+@import 'state/general_breakpoints/breakpoints';

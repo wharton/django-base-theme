@@ -1,15 +1,45 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * FOOTER 
+ *    - container
+ *    - columns
+ *    - lists
+ *    - links
+ *    - headers
+ *    - social icons
+ *    - contexts
+ *    - copyright
+ */
+ 
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
+
 #footer {
 	.container {
 		@include linear-gradient(#2e55a4,#0d2c68);
 		min-height: 300px;
 		height: 100%;
 	}
-	.col-md-3, .col-md-2 {
+}
+
+/*------------------------------------*\
+    #COLUMNS
+\*------------------------------------*/
+
+#footer {
+	.col-md-3, 
+	.col-md-2 {
 		padding-left: 0px;
 		padding-right: 0px;
 		padding-top: 20px;
 	}
 }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
 
 #footer {
 	ul {
@@ -22,8 +52,12 @@
 		font-family: $helv;
 	}
 }
+
+/*------------------------------------*\
+    #KNOWLEDGE LINK
+\*------------------------------------*/
 	
-#footer #knowledge {
+#footer #knowledge-link {
 	img {
 		width: 90%;
 		height: auto;
@@ -31,6 +65,10 @@
 		padding-top: 20px;
 	}
 }
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
 
 #footer {
 	a {
@@ -44,20 +82,31 @@
 			color: #ccc;
 		}
 	}
+}
+
+/*------------------------------------*\
+    #HEADERS
+\*------------------------------------*/
+
+#footer {
 	h5 {
 		text-transform: uppercase;
 		color: #A2B1D6;
 		font-weight: bold;
 		@include smoothing;
-		@include font-size(13px);
+		@include font-size(13px);		
 	}
 }
 
+/*------------------------------------*\
+    #SOCIAL ICONS
+\*------------------------------------*/
+
 #footer	{
-	.social {
+	.social-icons {
 		padding-top: 30px;
 	}
-	.social-icons {
+	.social-icons__links {
 	  img {
 		  @include large {
 			  width: 23px;
@@ -68,15 +117,19 @@
 		  }
 	  }
 		li {
-		float: left;
-		padding-right: 7px;
-		@include medium {
-			padding-right: 15px;
-		}
+		  float: left;
+		  padding-right: 7px;
+		  @include medium {
+			  padding-right: 15px;
+		  }
 	}
 	
 	}
 }
+
+/*------------------------------------*\
+    #CONTEXTS
+\*------------------------------------*/
 
 #footer {
 	@include medium {
@@ -86,13 +139,13 @@
 	  .row {
 		  padding: 0px 0px;
 	  }  
-	  #knowledge img,
-	  .mba,
+	  #knowledge-link img,
+	  .custom-app-link,
 	  .col-md-2, 
 	  .col-md-3 {
 		  display: none;
 	  }
-	  .social {
+	  .social-icons {
 		  display: block;
 		  padding-left: 18px;
 	  }	
@@ -104,18 +157,22 @@
 	  }
   }
   @include small {
-	 .social {
+	 .social-icons {
 		  display: block;
 		  padding-left: 0px;
 	  }	
   }
 }
 
+/*------------------------------------*\
+    #QUICKLINKS
+\*------------------------------------*/
+
 #footer {
-	.wharton {
+	.quicklinks {
 		border-left: 1px solid #a2b1d0;
 		padding-left: 35px;
-		&.mobile {
+		&.context--small {
 			display: none;
 			@include medium {
 				display: block;
@@ -130,6 +187,10 @@
 		}
 	}
 }
+
+/*------------------------------------*\
+    #COPYRIGHT
+\*------------------------------------*/
 
 #footer {
 	.copyright {
@@ -153,7 +214,7 @@
 				  padding-right: 5px;
 			  }
 			}
-			.mba a {
+			.custom-app-link a {
 				padding-left: 5px;
 			}
 			@include medium {
@@ -168,8 +229,8 @@
 			}
 		}
 		img {
-				float: left;
-				padding-right: 20px;
+		  float: left;
+		  padding-right: 20px;
 		}
 	}
 }

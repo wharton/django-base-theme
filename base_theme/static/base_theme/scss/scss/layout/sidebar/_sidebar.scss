@@ -1,0 +1,73 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * SIDEBAR
+ *   - display
+ *   - lists
+ *   - links
+ *   - states
+ *
+ *****/
+ 
+/*------------------------------------*\
+    #DISPLAY
+\*------------------------------------*/
+
+#sidebar {
+	display: block;
+	@include small {
+		display: none;
+	}
+}
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+#sidebar-nav {
+	width: 100%;
+	ul {
+    padding-left: 0px;
+    border: 1px solid #ccc;
+    background-color: #e8e8e8;
+	}
+	li {
+		border-bottom: 1px solid #fff;
+	}
+}
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+#sidebar-nav {
+  li {
+		a {
+			display: block;
+			padding: 10px 5px 10px 35px;
+			color: #254784;
+			@include font-size(16px);
+		}
+	}
+}
+
+/*------------------------------------*\
+    #STATES
+\*------------------------------------*/
+
+#sidebar-nav {
+  li {
+		a {
+			&:hover, &:focus {
+				padding-left: 23px; 
+				color: #000;
+				border-left: 12px solid $red;
+			}
+			&.current {
+				border-left: 12px solid $red;
+				padding-left:23px;
+				color: #000;
+			}
+		}
+	}
+}

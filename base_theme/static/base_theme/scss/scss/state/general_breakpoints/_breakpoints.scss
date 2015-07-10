@@ -1,18 +1,33 @@
-/* ==========================================================================
-   Breaking out these query styles into their own file
-   ========================================================================== */
-@media (max-width: 767px) {
+/****
+ * TABLE OF CONTENTS
+ *
+ * GENERAL MEDIA QUERIES 
+ *    - (max-width: 767px)
+ *
+ ****/
+ 
+/*------------------------------------*\
+    #(max-width: 767px)
+\*------------------------------------*/
+ 
+@include small {
+  
+  /** Containers **/
   #content {
 	  .container {
 		  padding-left: 0px;
 		  padding-right: 0px;
 	  }
   }
+  
+  /** Rows **/
   .row {
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
   }
-	#search-option {
+  
+  /** Search **/
+  #search-option {
 		display: block !important;
 		color: #fff;
 		position: absolute;
@@ -24,22 +39,16 @@
 			color: #fff;
 		}
 	}
-  #banner #title {
-	  padding-left: 20px;
-	  padding-top: 30px;
-	  @include font-size(22px);
-  } 
-  #logo {
-	  padding-left: 5px;
-	  max-width: 37%;
-	  height: auto;
-	  width: 100%;
-  }
-  #header, #banner, .main-nav {
+     
+  #header, 
+  #banner, 
+  .main-nav {
 	  .row {
 		  padding: 0px 0px;
 	  }
   }
+  
+  /** Navbar **/
   .navbar-collapse {
 	  background-color: #5a79b0;
 	  box-shadow: 4px 5px 3px -3px rgba(0,0,0,0.5),-4px 5px 3px -3px rgba(0,0,0,0.5);
@@ -52,13 +61,12 @@
 		  }
 	  }
   }
+  
   .navbar-nav {
 	  margin-bottom: 0px;
 	  margin-top: 0px;
   }
-  #breadcrumb {
-	  display: none;
-  }
+  
   .navbar-toggle {
 	  float: left;
 	  border: 0px;
@@ -67,25 +75,4 @@
 		  background: none !important;
 	  }
   }
-  #banner {
-	  .row {
-		  padding-left: 5px;
-	  }
-  }
-}
-
-@media (max-width: 680px) {
-	#banner #title {
-	  padding-left: 15px;
-	  padding-top: 25px;
-	  @include font-size(17px);
-  }
-} 
-
-@media (max-width: 500px) {
-	 #banner #title {
-	  padding-left: 15px;
-	  padding-top: 24px;
-	  @include font-size(11px);
- } 
 }  

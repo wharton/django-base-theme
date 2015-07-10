@@ -1,3 +1,18 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * TOP-NAV
+ *    - blocks, container
+ *    - dropdown menu
+ *    - top-nav leftbar
+ *    - right block
+ *    - top-nav search option
+ */
+
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
+
 #top-nav {
 	.navbar-left {
 		@include small {
@@ -42,6 +57,11 @@
 		}
 	}
 }
+
+/*------------------------------------*\
+    #DROPDOWN MENU
+\*------------------------------------*/
+
 #top-nav {
 	.dropdown-menu {
 		margin-top: -2px;
@@ -67,7 +87,11 @@
 	}
 }
 
-#top-red-bar {
+/*------------------------------------*\
+    #TOP-NAV LEFT BAR
+\*------------------------------------*/
+
+#top-nav__leftbar {
 	background-color: $red;
 	position: relative;
 	width: 375px;
@@ -80,12 +104,20 @@
 	}
 }
 
+/*------------------------------------*\
+    #RIGHT BLOCK
+\*------------------------------------*/
+
 #top-nav .nav.navbar-nav.navbar-right {
 	position: relative;
 	padding-top: 0px;
 	margin-top: 0px;
 	margin-right: -1px;
 }
+
+/*------------------------------------*\
+    #SEARCH-OPTION
+\*------------------------------------*/
 
 li#glyph-search {
 	height: 21px !important;
