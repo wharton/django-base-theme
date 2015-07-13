@@ -17,7 +17,7 @@
 
 @import 'helpers/fonts/font_families';
 @import 'helpers/fonts/font_colors';
-@import 'helpers/general_mixins';
+@import 'helpers/functions';
 @import 'helpers/svg';
 
 /*------------------------------------*\
@@ -31,7 +31,7 @@
 \*------------------------------------*/
 
 @import 'modules/print';
-@import 'modules/admin';
+/** @import 'modules/admin'; **/
 /** @import 'modules/sticky_footer'; **/
 @import 'modules/navigation/top_nav';
 @import 'modules/navigation/main_nav';

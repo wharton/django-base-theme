@@ -2,17 +2,17 @@
  * TABLE OF CONTENTS
  *
  * GENERAL MEDIA QUERIES 
- *    - (max-width: 767px)
+ *    - (max-width: 767px) or context 'small'
  *
  ****/
  
-/*------------------------------------*\
-    #(max-width: 767px)
-\*------------------------------------*/
+/*----------------------------------------*\
+  #(max-width: 767px) or context 'small'
+\*----------------------------------------*/
  
 @include small {
   
-  /** Containers **/
+  /** Content Containers **/
   #content {
 	  .container {
 		  padding-left: 0px;
@@ -20,13 +20,13 @@
 	  }
   }
   
-  /** Rows **/
+  /** All Rows **/
   .row {
 	  margin-left: 0px !important;
 	  margin-right: 0px !important;
   }
   
-  /** Search **/
+  /** Nav Search Option **/
   #search-option {
 		display: block !important;
 		color: #fff;
@@ -39,7 +39,8 @@
 			color: #fff;
 		}
 	}
-     
+  
+  /** Specific Rows **/   
   #header, 
   #banner, 
   .main-nav {
@@ -48,7 +49,7 @@
 	  }
   }
   
-  /** Navbar **/
+  /** Main Navbar **/
   .navbar-collapse {
 	  background-color: #5a79b0;
 	  box-shadow: 4px 5px 3px -3px rgba(0,0,0,0.5),-4px 5px 3px -3px rgba(0,0,0,0.5);
@@ -62,11 +63,13 @@
 	  }
   }
   
+  /** Main Navbar **/
   .navbar-nav {
 	  margin-bottom: 0px;
 	  margin-top: 0px;
   }
   
+  /** Main Navbar **/
   .navbar-toggle {
 	  float: left;
 	  border: 0px;
