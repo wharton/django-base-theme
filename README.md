@@ -87,10 +87,6 @@ TEMPLATE_DIRS = (
 ### PIP installation
 
 <pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
-
-Note: If you don't want to pip install the master branch, you can pip install others branches like this:
-
-- Example: pip install git+https://github.com/wharton/Django-Base-Theme#name_of_branch
 	
 <pre><code>pip install django-bootstrap3</code></pre>
 
