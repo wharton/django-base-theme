@@ -68,7 +68,8 @@ Some helpful SASS Mixins included in this theme are:
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets"), #### You can also call this static_dev or whatever name you want
+    os.path.join(BASE_DIR, "assets"), 
+    #### You can also call this static_dev or whatever name you want
 )
 
 TEMPLATE_DIRS = (
@@ -86,6 +87,10 @@ TEMPLATE_DIRS = (
 ### PIP installation
 
 <pre><code>pip install git+https://github.com/wharton/Django-Base-Theme</code></pre>
+
+Note: If you don't want to pip install the master branch, you can pip install others branches like this:
+
+- Example: pip install git+https://github.com/wharton/Django-Base-Theme#name_of_branch
 	
 <pre><code>pip install django-bootstrap3</code></pre>
 
@@ -194,7 +199,6 @@ This is just an example to get your started:
 
 class BaseView(TemplateView):
     template_name = "your_app/base.html" 
-    #### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
 </code></pre>
     
 ### And in your urls.py file:
