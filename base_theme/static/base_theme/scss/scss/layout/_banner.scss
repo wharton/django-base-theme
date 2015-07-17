@@ -1,0 +1,70 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * BANNER
+ *    - container
+ *    - logo
+ *    - title 
+ *    - specific contexts
+ *
+ *****/
+
+#banner {
+	.container {
+		@include linear-gradient(#0d2c68,#2e55a4);
+		padding-bottom: 17px;
+	}
+	#banner__logo {
+		margin-top: 17px;
+		float: left;
+		@include small {
+		  padding-left: 5px;
+	    max-width: 37%;
+	    height: auto;
+	    width: 100%;
+		}
+	}
+	#banner__title {
+		float: left;
+		padding-left: 35px;
+		padding-top: 25px;
+		color: #fff;
+		font-family: $pal;
+		@include smoothing;
+		text-transform: uppercase;
+		@include font-size(24px);
+		@include small {
+			padding-left: 20px;
+	    padding-top: 30px;
+	    @include font-size(22px);
+		}
+		
+	}
+	@include small {
+		.row {
+			padding-left: 5px;
+		}
+	}
+} 
+
+/*------------------------------------*\
+    #CONTEXTS
+\*------------------------------------*/
+
+/** #(max-width: 680px) **/
+@media screen and (max-width: 680px) {
+	#banner #banner__title {
+	  padding-left: 15px;
+	  padding-top: 25px;
+	  @include font-size(17px);
+  }
+}
+
+/** #(max-width: 500px) **/
+@media screen and (max-width: 500px) {
+	 #banner #banner__title {
+	  padding-left: 15px;
+	  padding-top: 24px;
+	  @include font-size(11px);
+ } 
+} 

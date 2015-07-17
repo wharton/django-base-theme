@@ -1,39 +1,70 @@
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
+/*****
+ * TABLE OF CONTENTS
+ *
+ * MEDIA QUERIES
+ *    - x-small
+ *    - small
+ *    - medium 
+ *    - large
+ *    - x-large
+ *
+ * REM to PIXEL 
+ *
+ * CROSS BROWSER OPACITY
+ *
+ * BORDER RADIUS
+ *
+ * TRANSITIONS
+ * 
+ * BORDER-BOX
+ * 
+ * FONT SMOOTHING
+ *
+ * BOX SHADOW
+ *
+ * GRADIENT
+ *
+ * BOOTSTRAP GLYPHS
+ *
+ *****/
+
+/*------------------------------------*\
+    #MEDIA QUERIES
+\*------------------------------------*/
+
 @mixin x-small {
-  @media only screen and (max-width:  350px) {
+  @media screen and (max-width:  350px) {
     @content;
   }
 }
 
 @mixin small {
-  @media only screen and (max-width:  767px) {
+  @media screen and (max-width:  767px) {
     @content;
   }
 }
 
 @mixin medium {
-  @media only screen and (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     @content;
   }
 }
 
 @mixin large {
-  @media only screen and (max-width: 1400px) {
+  @media screen and (max-width: 1400px) {
     @content;
   }
 }
 
 @mixin x-large {
-  @media only screen and (min-width: 1470px) {
+  @media screen and (min-width: 1470px) {
     @content;
   }
 }
 
-/* ==========================================================================
-   REM to Pixel Fallback
-   ========================================================================== */
+/*------------------------------------*\
+    #REM to PIXEL FALLBACK
+\*------------------------------------*/
    
 @function calculateRem($size) {
   $remSize: $size / 16px;
@@ -45,9 +76,9 @@
   font-size: calculateRem($size);
 }
 
-/* ==========================================================================
-   Cross Browser Opacity
-   ========================================================================== */
+/*------------------------------------*\
+    #CROSS-BROWSER OPACITY
+\*------------------------------------*/
    
 @mixin opacity($opacity) {
   opacity: $opacity;
@@ -55,9 +86,9 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
-/* ==========================================================================
-   Border Radius
-   ========================================================================== */
+/*------------------------------------*\
+    #BORDER-RADIUS
+\*------------------------------------*/
 
 @mixin border-radius($radius) {
 	 -webkit-border-top: $radius;
@@ -67,9 +98,9 @@
 	border-radius: $radius;
 }
 
-/* ==========================================================================
-   Transitions
-   ========================================================================== */
+/*------------------------------------*\
+    #TRANSITIONS
+\*------------------------------------*/
 
 @mixin transition($args) {
   -webkit-transition: $args;
@@ -79,18 +110,19 @@
   transition: $args;
 }
 
-/* ==========================================================================
-   Border-Box
-   ========================================================================== */
+/*------------------------------------*\
+    #BORDER-BOX
+\*------------------------------------*/
+
 @mixin border-box {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Font Smoothing
-   ========================================================================== */
+/*------------------------------------*\
+    #FONT SMOOTHING
+\*------------------------------------*/
 
 @mixin smoothing {
 	-moz-font-smoothing: antialiased;
@@ -99,9 +131,9 @@
 	text-rendering: optimizeLegibility;
 }
 
-/* ==========================================================================
-   Box Shadow
-   ========================================================================== */
+/*------------------------------------*\
+    #BOX SHADOW
+\*------------------------------------*/
    
 @mixin box-shadow($horiz, $vert, $blur, $spread, $color){
   -webkit-box-shadow: $horiz $vert $blur $spread $color;
@@ -109,9 +141,10 @@
   box-shadow: $horiz $vert $blur $spread $color;
 }
 
-/* ==========================================================================
-   Gradient
-   ========================================================================== */ 
+/*------------------------------------*\
+    #GRADIENT
+\*------------------------------------*/
+
 @mixin linear-gradient($fromColor, $toColor) {
 	background: $toColor; 
 	background: -o-linear-gradient(top, $fromColor, $toColor);
@@ -122,9 +155,9 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
-/* ==========================================================================
-   Bootstrap Glyphs
-   ========================================================================== */ 
+/*------------------------------------*\
+    #BOOTSTRAP GLYPHS
+\*------------------------------------*/
 
 @mixin glyph($content) {
 	content: $content;

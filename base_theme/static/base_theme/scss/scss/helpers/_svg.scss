@@ -1,7 +1,7 @@
-/* ==========================================================================
-   SVG Background-images with PNG and Retina FallBack (requires modernizer.js)
+/*------------------------------------*\
+   #SVG Background-images with PNG and Retina FallBack (requires modernizer.js)
    Example usage: @include background-image('pattern');
-   ========================================================================== */
+\*------------------------------------*/
    
 $image-path: '../../../base_theme/static/img/bg' !default;
 $fallback-extension: 'png' !default;

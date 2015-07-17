@@ -1,10 +1,11 @@
 ### Django Base Theme
-- Django Base Theme (v1.0) is a responsive front-end boilerplate designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
+- A responsive front-end boilerplate (v1.1) designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
 - It contains helpful plugins, components and standards to help you get started.
-- It also includes <a href="http://standards.wharton.upenn.edu">official Wharton branding styles, logos, layouts and fonts</a>.
+- It includes <a href="http://standards.wharton.upenn.edu">official Wharton branding styles, logos, layouts and fonts</a>.
 
 ### Table of Contents
 - Components & Standards
+- CSS Guidelines & Architecture
 - SASS/SCSS Integration
 - Modifying Settings.py
 	- Adding Directories
@@ -32,6 +33,8 @@
 - <a href="https://html5boilerplate.com">HTML5 Boilerplate</a>
 - HTML5 & CSS3
 - Responsive
+- <a href="https://smacss.com/">SMACSS Architecture</a>
+- <a href="http://cssguidelin.es/">cssguidelin.es</a> by <a href="http://csswizardry.com/work">Harry Roberts</a>
 - <a href="http://sass-lang.com">SASS/SCSS</a>
 - <a href="https://jquery.com">jQuery</a>
 - <a href="http://modernizr.com">Modernizer.js</a>
@@ -39,6 +42,12 @@
 - <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>
 - <a href="http://www.fonts.com">Custom fonts served via Fonts.com</a>
 - <a href="http://gulpjs.com">Gulp Workflow Automation</a>
+
+### CSS Guidelines & Architecture
+In addition to Bootstrap's syntax and formatting standards, we use the following guides (which we sometimes modify to our needs): 
+
+- <a href="https://smacss.com/">SMACSS Architecture</a>
+- <a href="http://cssguidelin.es/">cssguidelin.es</a> by <a href="http://csswizardry.com/work">Harry Roberts</a>
 
 ### SASS/SCSS Integration
 
@@ -59,7 +68,8 @@ Some helpful SASS Mixins included in this theme are:
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets"), #### You can also call this static_dev or whatever name you want
+    os.path.join(BASE_DIR, "assets"), 
+    #### You can also call this static_dev or whatever name you want
 )
 
 TEMPLATE_DIRS = (
@@ -185,7 +195,6 @@ This is just an example to get your started:
 
 class BaseView(TemplateView):
     template_name = "your_app/base.html" 
-    #### Remember to make sure your app's 'url.py' is pointing to your 'base.html' template.
 </code></pre>
     
 ### And in your urls.py file:

@@ -1,7 +1,18 @@
-/* ==========================================================================
-   Main Nav Styles
-   ========================================================================== */
-
+/**
+ * TABLE OF CONTENTS
+ *
+ * MAIN NAV
+ *    - states
+ *    - container
+ *    - links
+ *    - search form
+ *    - context small
+ */
+ 
+/*------------------------------------*\
+    #STATES
+\*------------------------------------*/
+ 
 .main-nav {
 	font-family: $helv;
 	&.navbar-inverse .navbar-nav > .active > a {
@@ -10,9 +21,18 @@
 		border-top: 4px solid $red;
 		@include small {
 			border-top: 0px;
-			}
+		}
 	}
+	&.navbar-inverse {
+		background: none;
+		border: 0px;
+	}	
+	
 }
+
+/*------------------------------------*\
+    #CONTAINER
+\*------------------------------------*/
 
 .main-nav {
 	min-height: 0px;
@@ -32,29 +52,31 @@
 	}
 }
 
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
 .main-nav {
-		&.navbar-inverse {
-		background: none;
-		border: 0px;
-			li a {
-				padding-top: 4px;
-				padding-bottom: 4px;
-				padding-left: 15px;
-				font-family: $helv;
-				@include smoothing;
-				font-weight: 400;
-				@include font-size(15px);
-				color: #fff;
-				border-left: 1px solid #6b87b8;
-				border-right: 1px solid #244b8e;
-				@include small {
-					border: 0px;
-					padding-sleft: 10px;
-				}
-				@include transition(all .4s ease 0s);
-				&:hover, &:focus {
-					background-color: $red;
-				}
+	&.navbar-inverse {
+		li a {
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-left: 15px;
+			font-family: $helv;
+			@include smoothing;
+			font-weight: 400;
+			@include font-size(15px);
+			color: #fff;
+			border-left: 1px solid #6b87b8;
+			border-right: 1px solid #244b8e;
+			@include small {
+				border: 0px;
+				padding-sleft: 10px;
+			}
+			@include transition(all .4s ease 0s);
+			&:hover, &:focus {
+				background-color: $red;
+			}
 	  }
 	  li.active a {
 		  padding-top: 0px;
@@ -64,6 +86,10 @@
 	  }
 	}
 }
+
+/*------------------------------------*\
+    #SEARCH OPTION & SEARCH FORM
+\*------------------------------------*/
 
 #search {
 	position: absolute;
@@ -109,8 +135,11 @@
 		color: #eee;
 	}
 }
+/*------------------------------------*\
+    #CONTEXT SMALL
+\*------------------------------------*/
 
-ul.mobile-sm {
+ul.sidebar__context--small {
 	display: none;
 	padding-left: 0px;
 	background-color: #e8e8e8;
