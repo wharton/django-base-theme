@@ -1,5 +1,5 @@
-### Django Base Theme v1.0
-- Django Base Theme is a responsive front-end boilerplate designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
+### Django Base Theme
+- Django Base Theme (v1.0) is a responsive front-end boilerplate designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
 - It contains helpful plugins, components and standards to help you get started.
 - It also includes <a href="http://standards.wharton.upenn.edu">official Wharton branding styles, logos, layouts and fonts</a>.
 
