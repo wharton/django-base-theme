@@ -16,6 +16,7 @@
  *   - textarea
  *   - helper classes
  *   - clearfix
+ *   - search hide
  * BOOTSTRAP OVERRIDES
  *   - breakpoint
  *   - support-ie10-width
@@ -383,6 +384,15 @@ section,
 			padding: 0px 115px;
 		}
 	}
+}
+
+/*-------------------------------------*\
+  #SEARCH HIDE
+\*-------------------------------------*/
+
+#search,
+.main-nav #search {
+	display: none;
 }
 
 /*------------------------------------------*\
