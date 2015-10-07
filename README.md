@@ -44,7 +44,7 @@
 - <a href="http://gulpjs.com">Gulp Workflow Automation</a>
 
 ### CSS Guidelines & Architecture
-In addition to Bootstrap's syntax and formatting standards, we use the following guides (which we sometimes modify to our needs): 
+We use the following style guides: 
 
 - <a href="https://smacss.com/">SMACSS Architecture</a>
 - <a href="http://cssguidelin.es/">cssguidelin.es</a> by <a href="http://csswizardry.com/work">Harry Roberts</a>
@@ -59,23 +59,37 @@ Some helpful SASS Mixins included in this theme are:
 
 - REM to px fallback
 - SVG Background-images with PNG and retina fallBack
-- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers">here</a>.
+- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
 
 ### Modifying Settings.py
 
-#### Add the following to the bottom of your settings.py file:
+#### Add the following to your settings.py file:
 
 <pre><code>STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets"), 
-    #### You can also call this static_dev or whatever name you want
-)
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
+    os.path.join(BASE_DIR, "static_dev"), 
+    #### You can also call this assets or whatever name you want
 )
 </code></pre>
+
+#### Update the following in your settings.py file:
+
+<pre><code>TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['templates'], #### template directory goes here
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]</code></pre>
 
 #### Add the following to the 'Installed_Apps' section: 
 

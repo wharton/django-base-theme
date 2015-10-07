@@ -26,6 +26,17 @@
  *
  * BOOTSTRAP GLYPHS
  *
+ * CALCULATE WIDTH
+ *
+ * LINE HEIGHT
+ *
+ * ABSOLUTE POSITIONING
+ *
+ * MARGIN & PADDING
+ *
+ * ASPECT RATIO
+ *
+ *
  *****/
 
 /*------------------------------------*\
@@ -33,31 +44,31 @@
 \*------------------------------------*/
 
 @mixin x-small {
-  @media screen and (max-width:  350px) {
+  @media only screen and (max-width:  350px) {
     @content;
   }
 }
 
 @mixin small {
-  @media screen and (max-width:  767px) {
+  @media only screen and (max-width:  767px) {
     @content;
   }
 }
 
 @mixin medium {
-  @media screen and (max-width: 992px) {
+  @media only screen and (max-width: 992px) {
     @content;
   }
 }
 
 @mixin large {
-  @media screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1400px) {
     @content;
   }
 }
 
 @mixin x-large {
-  @media screen and (min-width: 1470px) {
+  @media only screen and (min-width: 1470px) {
     @content;
   }
 }
@@ -171,4 +182,69 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include border-box;
+}
+
+/*------------------------------------*\
+    #Calculate Width
+\*------------------------------------*/
+
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+@function cp($target, $container) {
+  @return calc-percent($target, $container);
+}
+
+/*------------------------------------*\
+    #Line Height
+\*------------------------------------*/
+
+@mixin line-height($heightValue: 12 ){
+    line-height: $heightValue + px; //fallback for old browsers
+    line-height: (0.125 * $heightValue) + rem;
+}
+
+/*------------------------------------*\
+    #Absolute Positioning
+\*------------------------------------*/
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+/*------------------------------------*\
+    #Margin & Padding
+\*------------------------------------*/
+
+@mixin display ($disp, $padding: null, $r-margin: null, $l-margin: null) {
+    display: $disp;
+    padding: $padding;
+    margin-left: $l-margin;
+    margin-right: $r-margin;
+}
+
+/*------------------------------------*\
+    #Aspect Ratio
+\*------------------------------------*/
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .your-content-div-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
