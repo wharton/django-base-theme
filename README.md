@@ -1,5 +1,5 @@
 ### Django Base Theme
-- A responsive front-end boilerplate (v1.1) designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
+- A responsive front-end boilerplate designed for <a href="http://wharton.upenn.edu">Wharton</a> <a href="https://www.djangoproject.com">Django</a>/<a href="https://www.python.org">Python</a> apps.
 - It contains helpful plugins, components and standards to help you get started.
 - It includes <a href="http://standards.wharton.upenn.edu">official Wharton branding styles, logos, layouts and fonts</a>.
 
@@ -44,14 +44,14 @@
 - <a href="http://gulpjs.com">Gulp Workflow Automation</a>
 
 ### CSS Guidelines & Architecture
-We use the following style guides: 
+We use the following guides: 
 
 - <a href="https://smacss.com/">SMACSS Architecture</a>
 - <a href="http://cssguidelin.es/">cssguidelin.es</a> by <a href="http://csswizardry.com/work">Harry Roberts</a>
 
 ### SASS/SCSS Integration
 
-This project uses the CSS extension language <a href="http://sass-lang.com">SASS</a> (it's very similar to LESS for those familiar with LESS). SASS adds power and organization to your stylesheets.
+This project uses the CSS extension language <a href="http://sass-lang.com">SASS</a> (it's very similar to LESS). SASS adds power and organization to your stylesheets.
 
 SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">Compass</a>, <a href="http://libsass.org">LibSass</a>, <a href="https://incident57.com/codekit">CodeKit</a> or <a href="http://gulpjs.com">Gulp</a>.<a href="http://sass-lang.com"> Learn more about SASS/SCSS</a>. 
 
@@ -59,6 +59,7 @@ Some helpful SASS Mixins included in this theme are:
 
 - REM to px fallback
 - SVG Background-images with PNG and retina fallBack
+- Breakpoints
 - You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
 
 ### Modifying Settings.py
@@ -73,7 +74,7 @@ STATICFILES_DIRS = (
 )
 </code></pre>
 
-#### Update the following in your settings.py file:
+#### For Django 1.8+, update the following in your settings.py file:
 
 <pre><code>TEMPLATES = [
     {
@@ -90,6 +91,12 @@ STATICFILES_DIRS = (
         },
     },
 ]</code></pre>
+
+#### For Django 1.7 and below, just add this to the bottom of your settings file
+
+<pre><code>TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)</code></pre>
 
 #### Add the following to the 'Installed_Apps' section: 
 
@@ -172,7 +179,6 @@ The following is a list of blocks included in the Django Base Theme that you can
 - {% block extra_head_top %}
 - {% block fast_fonts %}
 - {% block head_css %}
-- {% block css_min %}
 - {% block font_awesome %}
 - {% block extra_head_bottom %}
 - {% block header_wrapper %}
@@ -203,7 +209,7 @@ The <a href="http://django-debug-toolbar.readthedocs.org/en/latest/installation.
 
 ### Initial Test View & Url Configuration
 
-This is just an example to get your started:
+#### And to your views
 
 <pre><code>from django.views.generic import TemplateView
 
@@ -211,7 +217,7 @@ class BaseView(TemplateView):
     template_name = "your_app/base.html" 
 </code></pre>
     
-### And in your urls.py file:
+#### And to your urls
 
 <pre><code>from project.views import BaseView
 
@@ -229,6 +235,6 @@ Included in this repo is an <a href="https://github.com/wharton/django-base-them
 
 Thank you to our contributors!
 
-* Chad Whitman https://github.com/chadwhitman
-* Tim Allen https://github.com/flipperpa
-* Frank Wiles https://github.com/frankwiles
+* Chad Whitman <a href="https://github.com/chadwhitman">https://github.com/chadwhitman</a>
+* Tim Allen <a href="https://github.com/flipperpa">https://github.com/flipperpa</a>
+* Frank Wiles <a href="https://github.com/frankwiles">https://github.com/frankwiles</a>
