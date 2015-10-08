@@ -164,10 +164,10 @@
   }
 }
 
-@media only screen and (min-width: 893px) and (max-width: 893px) {
-  #footer {
-	  .col-md-2 {
-			width: 30%;
+#footer {
+	@include medium {
+		.col-md-2 {
+			width: 100%;
 		}
 	}
 }
