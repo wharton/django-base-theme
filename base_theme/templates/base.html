@@ -129,14 +129,34 @@
                         <li><a href="#">Item 2</a></li>
                         <li><a href="#">Item 3</a></li>
                         <li class="active"><a href="#">Active Item 4</a></li>
+                        <li class="dropdown-list">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Dropdown
+                                <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Dropdown Item 1</a></li>
+                                    <li><a href="#">Dropdown Item 2</a></li>
+                                    <li><a href="#">Dropdown Item 3</a></li>
+                                    <li><a href="#">Dropdown Item 4</a></li>
+                                </ul>
+                            </div>
+                        </li><!--/ end dropdown-list -->
                         <!--/ This will need to be adjusted based on the layout you end up choosing -->
          		            {% block mobile_sidebar_nav %}
+                            <ul class="sidebar__context--small">
+		                        <li class="sidebar__context--small__header"><a href="#">Dropdown Menu Starts Here</a></li>
+		                        <li class="active"><a href="#">Dropdown Item 1 Example Active</a></li>
+		                        <li><a href="#">Dropdown Item 2</a></li>
+		                        <li><a href="#">Dropdown Item 3</a></li>
+                            </ul>
 		                    <ul class="sidebar__context--small">
-		                        <li><a href="#">Sidebar Menu Starts Here</a></li>
-		                        <li class="active"><a href="#">Active Item 1</a></li>
-		                        <li><a href="#">Item 3</a></li>
-		                        <li><a href="#">Item 4</a></li>
-		                        <li><a href="#">Item 5</a></li>
+		                        <li class="sidebar__context--small__header"><a href="#">Sidebar Menu Starts Here</a></li>
+		                        <li class="active"><a href="#">Sidebar Item 1 Example Active</a></li>
+		                        <li><a href="#">Sidebar Item 2</a></li>
+		                        <li><a href="#">Sidebar Item 3</a></li>
+		                        <li><a href="#">Sidebar Item 4</a></li>
 		                    </ul>
 		                    <li><a href="#">Item 5</a></li>
 		                    <li><a href="#">Item 6</a></li>
@@ -329,21 +349,21 @@
 				        </div>
 			      </div><!--/ end col-md-2 social-icons -->
 			  </div><!--/ end row -->
-	      <div class="col-md-2 quicklinks context--small">
-	          <ul>
+	      <div class="row copyright">
+            <div class="col-md-12">
+    	      <ul class="copyright__menu--context-small">
 	   	          <li><a href="http://www.wharton.upenn.edu">Home</a></li>
 			          <li><a href="http://news.wharton.upenn.edu">News</a></li>
 			          <li><a href="http://www.wharton.upenn.edu/contact-us-directories">Contact Wharton</a></li>
 			          <li><a href="http://www.wharton.upenn.edu/locations">Locations</a></li>
-	          </ul>
-	      </div><!--/ end col-md-2 quicklinks context--small -->
-	      <div class="row copyright">
+	          </ul><!--/ end context-small menu -->
 	          <a href="http://www.upenn.edu"><img src="{% static "base_theme/img/footer/Penn-footer-logo.png" alt="UPenn Logo" %}"/></a>
 	          <p>&copy; {% now "Y" %} <a href="http://www.wharton.upenn.edu/">The Wharton School,</a> <a href="http://www.upenn.edu">The University of Pennsylvania</a>
 	          {% block footer_app_link %}
 	              <span class="custom-app-link">|<a href={% url 'home' %}>Your App Name Here</a></span>
 	          {% endblock footer_app_link %}</p>
-	      </div><!--/ end row copyright -->
+	        </div><!--/ end row copyright -->
+	      </div><!--/ end col-md-12 -->
     </div><!--/ end container -->
 	{% endblock footer %}
 </footer><!--/ end footer -->

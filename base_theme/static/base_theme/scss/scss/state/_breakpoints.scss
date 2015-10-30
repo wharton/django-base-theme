@@ -30,9 +30,7 @@
   #search-option {
 		display: block !important;
 		color: #fff;
-		position: absolute;
-		top: 0px;
-		right: 0px;
+		@include abs-pos(0px, 0px, auto, auto);
 		padding-right: 20px;
 		padding-top: 10px;
 		.glyphicon-search {
@@ -55,8 +53,13 @@
 	  box-shadow: 4px 5px 3px -3px rgba(0,0,0,0.5),-4px 5px 3px -3px rgba(0,0,0,0.5);
 	  li {
 		  border-bottom: 1px solid #8da0c8;
-		  padding-top: 7px;
-		  padding-bottom: 7px;
+		  padding-top: 0px;
+		  padding-bottom: 0px;
+		  a {
+            padding-top: 7px !important;
+            padding-bottom: 7px !important;
+            display: block;
+		  }
 		  &:hover {
 			  background: $red !important;
 		  }

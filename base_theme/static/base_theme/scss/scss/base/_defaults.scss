@@ -17,6 +17,7 @@
  *   - helper classes
  *   - clearfix
  *   - search hide
+ *   - btn
  * BOOTSTRAP OVERRIDES
  *   - breakpoint
  *   - support-ie10-width
@@ -403,6 +404,20 @@ section,
 #search,
 .main-nav #search {
 	display: none;
+}
+
+/*-------------------------------------*\
+  #OVERRIDE BOOTSTRAP BUTTON
+\*-------------------------------------*/
+
+main#content {
+    .btn {
+        &:hover,
+        &:active,
+        &:focus {
+            @include box-shadow(0px, 0px, 0px, 0px, none);
+        }
+    }
 }
 
 /*------------------------------------------*\

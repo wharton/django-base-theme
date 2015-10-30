@@ -36,6 +36,12 @@
  *
  * ASPECT RATIO
  *
+ * RGBA BACKGROUND
+ *
+ * ANIMATION
+ * 
+ * VERTICAL ALIGN
+ * 
  *
  *****/
 
@@ -209,7 +215,7 @@
     #Absolute Positioning
 \*------------------------------------*/
 
-@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin abs-pos ($top, $right, $bottom, $left) {
   top: $top;
   right: $right;
   bottom: $bottom;
@@ -247,4 +253,42 @@
     right: 0;
     bottom: 0;
   }
+}
+
+/*------------------------------------*\
+    #RGBA Background
+\*------------------------------------*/
+
+@mixin rgba-background($hexcolor, $opacity: 1) {
+  @if $opacity == 1 {
+    background-color: $hexcolor;
+  }
+  @else {
+    background-color: $hexcolor;
+    background-color: rgba($hexcolor, $opacity); 
+  }
+}
+
+/*------------------------------------*\
+    #ANIMATION
+\*------------------------------------*/
+
+@mixin animate($animation) {
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    animation: $animation;
+}
+
+/*------------------------------------*\
+    #VERTICAL ALIGN
+\*------------------------------------*/
+
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  left: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
