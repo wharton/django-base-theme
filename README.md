@@ -51,16 +51,16 @@ We use the following guides:
 
 ### SASS/SCSS Integration
 
-This project uses the CSS extension language <a href="http://sass-lang.com">SASS</a> (it's very similar to LESS). SASS adds power and organization to your stylesheets.
+This project uses the CSS extension language <a href="http://sass-lang.com">SASS</a>. SASS adds power and organization to your stylesheets.
 
 SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">Compass</a>, <a href="http://libsass.org">LibSass</a>, <a href="https://incident57.com/codekit">CodeKit</a> or <a href="http://gulpjs.com">Gulp</a>.<a href="http://sass-lang.com"> Learn more about SASS/SCSS</a>. 
 
 Some helpful SASS Mixins included in this theme are:
 
-- REM to px fallback
+- REM to PX fallback and Viewport to REM to PX fallback
 - SVG Background-images with PNG and retina fallBack
-- Breakpoints
-- You can see a full (and growing) list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
+- Breakpoints, RGBA Background, Vertical Align, etc.
+- You can see a full list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
 
 ### Modifying Settings.py
 

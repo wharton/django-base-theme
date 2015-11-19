@@ -9,6 +9,8 @@
  *    - x-large
  *
  * REM to PIXEL 
+ * 
+ * VIEWPORT to REM to PX FALLBACK
  *
  * CROSS BROWSER OPACITY
  *
@@ -94,6 +96,21 @@
 }
 
 /*------------------------------------*\
+    #Viewport to REM to PX fallback
+\*------------------------------------*/
+   
+@function get-vw($target) { 
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin vw($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  font-size: get-vw($size);
+}
+
+/*------------------------------------*\
     #CROSS-BROWSER OPACITY
 \*------------------------------------*/
    
@@ -108,7 +125,7 @@
 \*------------------------------------*/
 
 @mixin border-radius($radius) {
-	 -webkit-border-top: $radius;
+    -webkit-border-top: $radius;
 	-webkit-border-top: $radius;
 	-moz-border-radius: $radius;
 	-moz-border-radius: $radius;
@@ -268,6 +285,7 @@
     background-color: rgba($hexcolor, $opacity); 
   }
 }
+
 
 /*------------------------------------*\
     #ANIMATION
