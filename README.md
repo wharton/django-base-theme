@@ -6,6 +6,7 @@
 ### Table of Contents
 - Components & Standards
 - CSS Guidelines & Architecture
+- Browser Support
 - SASS/SCSS Integration
 - Modifying Settings.py
 	- Adding Directories
@@ -48,6 +49,17 @@ We use the following guides:
 
 - <a href="https://smacss.com/">SMACSS Architecture</a>
 - <a href="http://cssguidelin.es/">cssguidelin.es</a> by <a href="http://csswizardry.com/work">Harry Roberts</a>
+
+### Browser Support
+At present, we officially aim to support the following browsers:
+
+- IE10, IE11, MS Edge
+- The latest version of Chrome, Firefox, Safari & Opera
+- The latest version of Safari & Chrome for iOS
+- The latest version of Chrome for Android
+- Find out if you are using the most up-to-date browser at <a href="http://whatbrowser.org">http://whatbrowser.org</a> or <a href="http://browsehappy.com">http://browsehappy.com</a>.
+
+This is not to say that Django Base Theme cannot necessarily be used in browsers older than those reflected, but that the best experience and our development focus will be on those browsers listed above.
 
 ### SASS/SCSS Integration
 
