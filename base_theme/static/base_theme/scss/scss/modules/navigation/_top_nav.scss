@@ -44,7 +44,7 @@
 			list-style-type: none;
 		}
 		a {
-			padding: 1px 8px;
+			padding: 1px 8px 0px 8px;
 			@include font-size(11px);
 			font-family: $helv;
 			font-weight: 700;
@@ -122,6 +122,6 @@
 li#glyph-search {
 	height: 21px !important;
   a {
-	  padding: 1px 8px !important;
+	  padding: 1px 8px 0px 8px !important;
   }
 }

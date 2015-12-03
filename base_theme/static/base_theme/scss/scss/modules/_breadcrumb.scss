@@ -46,8 +46,9 @@
 		padding-top: 0px;
 		padding-bottom: 0px;
 		padding-right: 10px;
-		@include font-size(1px);
-		@include glyph("\e080");
+		@include fawesome("\f054");
+        @include font-size(9px);
+        top: -2px;
 	}
 }
 

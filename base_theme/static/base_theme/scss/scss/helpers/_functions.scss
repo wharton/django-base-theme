@@ -28,6 +28,8 @@
  *
  * BOOTSTRAP GLYPHS
  *
+ * FONTAWESOME GLYPHS
+ *
  * CALCULATE WIDTH
  *
  * LINE HEIGHT
@@ -205,6 +207,33 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include border-box;
+}
+
+/*------------------------------------*\
+    #FONTAWESOME GLYPHS
+\*------------------------------------*/
+
+@mixin fawesome($content) {
+	content: $content;
+	position: relative;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 400;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font: normal normal normal 14px/1 FontAwesome;
 }
 
 /*------------------------------------*\

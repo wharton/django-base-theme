@@ -177,9 +177,11 @@ h6 {
 a {
 	font-family: $roma;
 	color: $red;
+	outline: 0;
 	&:hover, &:focus {
 		text-decoration: none;
 		color: #df524e;
+		outline: 0;
 	}
 }
 
