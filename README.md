@@ -59,7 +59,7 @@ At present, we officially aim to support the following browsers:
 - The latest version of Chrome for Android
 - Find out if you are using the most up-to-date browser at <a href="http://whatbrowser.org">http://whatbrowser.org</a> or <a href="http://browsehappy.com">http://browsehappy.com</a>.
 
-This is not to say that Django Base Theme cannot necessarily be used in browsers older than those reflected, but that the best experience and our development focus will be on those browsers listed above.
+This is not to say that Django Base Theme cannot be used in browsers older than those reflected, but that the best experience and our development focus will be on those browsers listed above.
 
 ### SASS/SCSS Integration
 
@@ -69,7 +69,7 @@ SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">C
 
 Some helpful SASS Mixins included in this theme are:
 
-- REM to PX fallback and Viewport to REM to PX fallback
+- REM to PX fallback & Viewport to REM to PX fallback
 - SVG Background-images with PNG and retina fallBack
 - Breakpoints, RGBA Background, Vertical Align, etc.
 - You can see a full list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
