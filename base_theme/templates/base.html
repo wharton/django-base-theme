@@ -25,14 +25,10 @@
     {% block fast_fonts %}
         <script src="https://fast.fonts.com/jsapi/9c101523-c9e9-4e52-b751-a5b16576f638.js"></script>
     {% endblock fast_fonts %}
-    <script src="{% static "base_theme/js/vendor/modernizr.min.js" %}"></script>
-    <!--[if lt IE 9]>
-       <script src="{% static "base_theme/js/vendor/respond.min.js" %}"></script>
-    <![endif]-->
     {% block extra_head_bottom %}{% endblock extra_head_bottom %}
 </head>
 <body>
-  <!--[if lt IE 7]>
+  <!--[if lte IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser.
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
       to improve your experience.

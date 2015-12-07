@@ -39,7 +39,6 @@
 - <a href="http://sass-lang.com">SASS/SCSS</a>
 - <a href="https://jquery.com">jQuery</a>
 - <a href="http://modernizr.com">Modernizer.js</a>
-- <a href="https://github.com/scottjehl/Respond">Respond.js</a>
 - <a href="http://fortawesome.github.io/Font-Awesome">Font Awesome</a>
 - <a href="http://www.fonts.com">Custom fonts served via Fonts.com</a>
 - <a href="http://gulpjs.com">Gulp Workflow Automation</a>
