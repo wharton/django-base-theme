@@ -7,6 +7,7 @@
 - Components & Standards
 - CSS Guidelines & Architecture
 - Browser Support
+- Performance
 - SASS/SCSS Integration
 - Modifying Settings.py
 	- Adding Directories
@@ -59,6 +60,10 @@ At present, we officially aim to support the following browsers:
 - Find out if you are using the most up-to-date browser at <a href="http://whatbrowser.org">http://whatbrowser.org</a> or <a href="http://browsehappy.com">http://browsehappy.com</a>.
 
 This is not to say that Django Base Theme cannot be used in browsers older than those reflected, but that the best experience and our development focus will be on those browsers listed above.
+
+### Performance
+
+Base Theme strives for fast page load times. Not including server configuration enhancements, Base Theme's default template scores a grade of "A" in every category via <a href="http://yslow.org">YSlow's</a> web page analyzer. Our median <a href="http://www.webpagetest.org">Web Page Test</a> scores for the default template have a Speed Index of ~1450 (we are working on getting it down to ~1000, which is ideal).
 
 ### SASS/SCSS Integration
 
