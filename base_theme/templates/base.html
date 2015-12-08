@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-{% load bootstrap3 %}
 {% load fontawesome %}
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -15,7 +14,6 @@
     <link rel="icon" href="{% static "base_theme/favicon.ico" %}">
     <title>{% block site_title %}Wharton Shoutouts{% endblock site_title %}</title>
     {% block extra_head_top %}{% endblock extra_head_top %}
-    {% bootstrap_css %}
     {% block head_css %}
         <link href="{% static "base_theme/scss/compiled_css/all.min.css" %}" rel="stylesheet" type="text/css">
         {% block font_awesome %}
@@ -370,7 +368,6 @@
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    {% bootstrap_javascript %}
     <script src="{% static "base_theme/js/all.min.js" %}"></script>
 {% endblock footer_js %}
 {% block extra_footer_js %}{% endblock extra_footer_js %}
