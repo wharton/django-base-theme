@@ -1,52 +1,28 @@
 /*****
  * TABLE OF CONTENTS
  *
- * MEDIA QUERIES
- *    - x-small
- *    - small
- *    - medium 
- *    - large
- *    - x-large
- *
- * REM to PIXEL 
+ * Media Queries
+ * Rem to Pixel fallback
+ * Viewport to REM to PX fallback
+ * Cross browser opacity
+ * Border Radius
+ * Transitions
+ * Border-box
+ * Font-smoothing
+ * Box Shadow
+ * Gradient
+ * Bootstrap Glyphs
+ * Fontawesome
+ * Calculate Width
+ * Line height
+ * Absolute positioning
+ * Margin & Padding
+ * Aspect Ratio
+ * RGBA Background
+ * Animation
+ * Vertical Align
+ * Horizontal Align
  * 
- * VIEWPORT to REM to PX FALLBACK
- *
- * CROSS BROWSER OPACITY
- *
- * BORDER RADIUS
- *
- * TRANSITIONS
- * 
- * BORDER-BOX
- * 
- * FONT SMOOTHING
- *
- * BOX SHADOW
- *
- * GRADIENT
- *
- * BOOTSTRAP GLYPHS
- *
- * FONTAWESOME GLYPHS
- *
- * CALCULATE WIDTH
- *
- * LINE HEIGHT
- *
- * ABSOLUTE POSITIONING
- *
- * MARGIN & PADDING
- *
- * ASPECT RATIO
- *
- * RGBA BACKGROUND
- *
- * ANIMATION
- * 
- * VERTICAL ALIGN
- * 
- *
  *****/
 
 /*------------------------------------*\
@@ -81,6 +57,18 @@
   @media only screen and (min-width: 1470px) {
     @content;
   }
+}
+
+@mixin context($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin min-max($min, $max) {
+    @media only screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
 }
 
 /*------------------------------------*\
@@ -315,7 +303,6 @@
   }
 }
 
-
 /*------------------------------------*\
     #ANIMATION
 \*------------------------------------*/
@@ -338,4 +325,16 @@
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/*------------------------------------*\
+    #HORIZONTAL ALIGN
+\*------------------------------------*/
+
+@mixin horizontal-align($position) {
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }

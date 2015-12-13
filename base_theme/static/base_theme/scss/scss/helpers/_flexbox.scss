@@ -1,0 +1,110 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * - Flexbox Functions
+ *   - Flexbox
+ *   - Values
+ *   - Order
+ *   - Direction
+ *   - Align Item
+ *   - Align Content
+ *   - Justify
+ *   - Flow
+ *
+ *****/
+
+/*------------------------------------*\
+    #Flexbox
+\*------------------------------------*/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/*------------------------------------*\
+    #Flexbox Values
+\*------------------------------------*/
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+/*------------------------------------*\
+    #Flexbox Order
+\*------------------------------------*/
+
+@mixin flex-order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+/*------------------------------------*\
+    #Flexbox Direction
+\*------------------------------------*/
+
+@mixin flex-direction($direction) {
+   -webkit-flex-direction: $direction;
+   -moz-flex-direction: $direction;
+   -ms-flex-direction: $direction;
+   -webkit-flex-direction: $direction;
+   flex-direction: $direction;
+}
+
+/*------------------------------------*\
+    #Flexbox Center
+\*------------------------------------*/
+
+@mixin flex-align-item($position) {
+   -webkit-align-items: $position;
+   -moz-align-items: $position;
+   -ms-align-items: $position;
+   -webkit-align-items: $position;
+   align-items: $position;
+}
+
+/*------------------------------------*\
+    #Flexbox Center
+\*------------------------------------*/
+
+@mixin flex-align-content($position) {
+   -webkit-align-items: $position;
+   -moz-align-items: $position;
+   -ms-align-items: $position;
+   -webkit-align-items: $position;
+   align-items: $position;
+}
+
+/*------------------------------------*\
+    #Flexbox Justify Content
+\*------------------------------------*/
+
+@mixin flex-justify($position) {
+   -webkit-justify-content: $position;
+   -moz-justify-content: $position;
+   -ms-justify-content: $position;
+   -webkit-justify-content: $position;
+   justify-content: $position;
+}
+
+/*------------------------------------*\
+    #Flexbox Flow
+\*------------------------------------*/
+
+@mixin flex-flow($direction, $flow) {
+  -webkit-flex-flow: $direction $flow;
+  -moz-flex-flow: $direction $flow;
+  -ms-flex-flow: $direction $flow;
+  -webkit-flex-flow: $direction $flow;
+  flex-flow: $direction $flow;
+}

@@ -73,9 +73,10 @@ SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">C
 
 Some helpful SASS Mixins included in this theme are:
 
+- Flexbox
 - REM to PX fallback & Viewport to REM to PX fallback
 - SVG Background-images with PNG and retina fallBack
-- Breakpoints, RGBA Background, Vertical Align, etc.
+- Breakpoints, RGBA Background, Vertical Align, Horizontal Align, etc.
 - You can see a full list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
 
 ### Modifying Settings.py
