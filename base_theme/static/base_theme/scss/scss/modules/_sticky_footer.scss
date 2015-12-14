@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #EXAMPLE STICKY FOOTER
+    #Sticky Footer Options
 \*------------------------------------*/
 
 html,
@@ -20,5 +20,20 @@ main {
 }
 
 #footer {
-  background-color: #f5f5f5;
+  background-color: $coolGrey;
 }
+
+/*------------------------------------*\
+    #Flexbox Sticky by Phillip Walton
+\*------------------------------------*/
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
