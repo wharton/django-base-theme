@@ -9,6 +9,7 @@
 - Browser Support
 - Performance
 - SASS/SCSS Integration
+- Using Gulp to automate your front-end workflow
 - Modifying Settings.py
 	- Adding Directories
 	- Adding Installed Apps
@@ -23,9 +24,7 @@
 - Utilizing the Django Block System
 	- A list of blocks available with base-theme
 - Adding Django Debug Toolbar
-- Example test view & url configuration
-- Example url.py file
-- Using Gulp to automate your front-end workflow
+- Example View & URL Dispatcher
 - List of Contributors
 	
 ### Components & Standards: 
@@ -74,10 +73,15 @@ SCSS/SASS outputs to CSS via compilers like <a href="http://compass-style.org">C
 Some helpful SASS Mixins included in this theme are:
 
 - Flexbox
+- Breakpoints
 - REM to PX fallback & Viewport to REM to PX fallback
 - SVG Background-images with PNG and retina fallBack
-- Breakpoints, RGBA Background, Vertical Align, Horizontal Align, etc.
+- RGBA Background, Vertical Align, Horizontal Align, etc.
 - You can see a full list of mixins, variables and other SASS helpers <a href="https://github.com/wharton/django-base-theme/tree/master/base_theme/static/base_theme/scss/scss/helpers/_functions.scss">here</a>.
+
+### Using Gulp to automate your front-end workflow 
+
+Included in this repo is an <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/static/base_theme/gulpfile.js">example gulpfile</a> (based on: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). If you use Gulp, you will need to manually add it to your root directory and customize it to your project's needs. For more info on how to use Gulp go here: <a href="http://gulpjs.com">http://gulpjs.com</a>.
 
 ### Modifying Settings.py
 
@@ -91,7 +95,7 @@ STATICFILES_DIRS = (
 )
 </code></pre>
 
-#### For Django 1.8+, update the following in your settings.py file:
+#### For Django 1.8+:
 
 <pre><code>TEMPLATES = [
     {
@@ -109,7 +113,7 @@ STATICFILES_DIRS = (
     },
 ]</code></pre>
 
-#### For Django 1.7 and below, just add this to the bottom of your settings file
+#### For Django 1.7:
 
 <pre><code>TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
@@ -234,7 +238,9 @@ class BaseView(TemplateView):
     template_name = "your_app/base.html" 
 </code></pre>
     
-#### And to your urls
+#### URL Dispatcher
+
+##### For Django 1.7:
 
 <pre><code>from project.views import BaseView
 
@@ -244,9 +250,14 @@ urlpatterns = patterns('',
 )
 </code></pre>
 
-### Using Gulp to automate your front-end workflow 
+##### For Django 1.8+:
 
-Included in this repo is an <a href="https://github.com/wharton/django-base-theme/blob/master/base_theme/static/base_theme/gulpfile.js">example gulpfile</a> (based on: <a href='http://www.revsys.com/blog/2014/oct/21/ultimate-front-end-development-setup/'>RevSys' Front-end Guide</a>). If you use Gulp, you will need to manually add it to your root directory and customize it to your project's needs. For more info on how to use Gulp go here: <a href="http://gulpjs.com">http://gulpjs.com</a>.
+<pre><code>from project.views import BaseView
+urlpatterns = [
+    url(r'^$', BaseView.as_view(), name='home'),
+    url(r'^admin/', include(admin.site.urls)),
+]
+</code></pre>
 
 ### Contributors
 
