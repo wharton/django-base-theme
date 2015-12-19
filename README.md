@@ -95,8 +95,6 @@ STATICFILES_DIRS = (
 )
 </code></pre>
 
-#### For Django 1.8+:
-
 <pre><code>TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -112,12 +110,6 @@ STATICFILES_DIRS = (
         },
     },
 ]</code></pre>
-
-#### For Django 1.7:
-
-<pre><code>TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
-)</code></pre>
 
 #### Add the following to the 'Installed_Apps' section: 
 
@@ -239,18 +231,6 @@ class BaseView(TemplateView):
 </code></pre>
     
 #### URL Dispatcher
-
-##### For Django 1.7:
-
-<pre><code>from project.views import BaseView
-
-urlpatterns = patterns('',
-    url(r'^$', BaseView.as_view(), name='home'),
-    url(r'^admin/', include(admin.site.urls)),
-)
-</code></pre>
-
-##### For Django 1.8+:
 
 <pre><code>from project.views import BaseView
 urlpatterns = [
