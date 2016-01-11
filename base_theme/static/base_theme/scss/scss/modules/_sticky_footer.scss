@@ -1,39 +1,13 @@
 /*------------------------------------*\
-    #Sticky Footer Options
+    #Flexbox Sticky
 \*------------------------------------*/
 
-html,
 body {
-  height: 100%;
-}
-
-main {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -60px;
-}
-
-#push, 
-#footer {
-	height: 60px;
-}
-
-#footer {
-  background-color: $coolGrey;
-}
-
-/*------------------------------------*\
-    #Flexbox Sticky by Phillip Walton
-\*------------------------------------*/
-
-.Site {
-  display: flex;
+  @include flexbox();
   min-height: 100vh;
-  flex-direction: column;
+  @include flex-direction(column);
 }
 
-.Site-content {
-  flex: 1;
+main#content {
+  @include flex(1);
 }
-
