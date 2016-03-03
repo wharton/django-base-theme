@@ -1,0 +1,62 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * TRANSFORMS
+ *     - vertical align
+ *     - horiztonal align
+ *     - vertical & horiztonal align
+ *     - rotate
+ *
+ *****/
+
+/*------------------------------------*\
+    #VERTICAL ALIGN
+\*------------------------------------*/
+
+@mixin vertical-align($position) {
+  position: $position;
+  top: 50%;
+  left: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*------------------------------------*\
+    #HORIZONTAL ALIGN
+\*------------------------------------*/
+
+@mixin horizontal-align($position) {
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*------------------------------------*\
+    #HORIZONTAL & VERTICAL ALIGN
+\*------------------------------------*/
+
+@mixin horz-vert-align($position) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/*------------------------------------*\
+    #ROTATE
+\*------------------------------------*/
+
+@mixin rotate($deg) {
+    -ms-transform: rotate($deg); 
+    -moz-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}

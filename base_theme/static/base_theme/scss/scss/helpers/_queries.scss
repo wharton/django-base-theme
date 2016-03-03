@@ -1,0 +1,70 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * MEDIA QUERIES
+ *     - specified breakpoints
+ *     - custom breakpoints
+ *         - max
+ *         - max & min
+ *
+ *****/
+
+/*------------------------------------*\
+    #MEDIA QUERIES
+\*------------------------------------*/
+
+@mixin x-small {
+  @media only screen and (max-width:  350px) {
+    @content;
+  }
+}
+
+@mixin mini {
+  @media only screen and (max-width:  480px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (max-width:  767px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin x-large {
+  @media only screen and (min-width: 1470px) {
+    @content;
+  }
+}
+
+/*------------------------------------*\
+    #CUSTOM MAX
+\*------------------------------------*/
+
+@mixin context($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+/*------------------------------------*\
+    #CUSTOM MIN & MAX
+\*------------------------------------*/
+
+@mixin min-max($min, $max) {
+    @media only screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}

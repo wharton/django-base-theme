@@ -1,9 +1,6 @@
 /*****
  * TABLE OF CONTENTS
  *
- * Media Queries
- * Rem to Pixel fallback
- * Viewport to REM to PX fallback
  * Cross browser opacity
  * Border Radius
  * Transitions
@@ -20,86 +17,9 @@
  * Aspect Ratio
  * RGBA Background
  * Animation
- * Vertical Align
- * Horizontal Align
  * 
  *****/
-
-/*------------------------------------*\
-    #MEDIA QUERIES
-\*------------------------------------*/
-
-@mixin x-small {
-  @media only screen and (max-width:  350px) {
-    @content;
-  }
-}
-
-@mixin small {
-  @media only screen and (max-width:  767px) {
-    @content;
-  }
-}
-
-@mixin medium {
-  @media only screen and (max-width: 992px) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media only screen and (max-width: 1400px) {
-    @content;
-  }
-}
-
-@mixin x-large {
-  @media only screen and (min-width: 1470px) {
-    @content;
-  }
-}
-
-@mixin context($width) {
-    @media only screen and (max-width: $width) {
-        @content;
-    }
-}
-
-@mixin min-max($min, $max) {
-    @media only screen and (min-width: $min) and (max-width: $max) {
-        @content;
-    }
-}
-
-/*------------------------------------*\
-    #REM to PIXEL FALLBACK
-\*------------------------------------*/
-   
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-/*------------------------------------*\
-    #Viewport to REM to PX fallback
-\*------------------------------------*/
-   
-@function get-vw($target) { 
-  $vw-context: (1000*.01) * 1px;
-  @return ($target/$vw-context) * 1vw;
-}
-
-@mixin vw($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-  font-size: get-vw($size);
-}
-
+ 
 /*------------------------------------*\
     #CROSS-BROWSER OPACITY
 \*------------------------------------*/
@@ -115,10 +35,9 @@
 \*------------------------------------*/
 
 @mixin border-radius($radius) {
-    -webkit-border-top: $radius;
-	-webkit-border-top: $radius;
+    -webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
-	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
 	border-radius: $radius;
 }
 
@@ -127,11 +46,11 @@
 \*------------------------------------*/
 
 @mixin transition($args) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
+   -webkit-transition: $args;
+   -moz-transition: $args;
+   -ms-transition: $args;
+   -o-transition: $args;
+   transition: $args;
 }
 
 /*------------------------------------*\
@@ -139,20 +58,10 @@
 \*------------------------------------*/
 
 @mixin border-box {
-	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-}
-
-/*------------------------------------*\
-    #FONT SMOOTHING
-\*------------------------------------*/
-
-@mixin smoothing {
-	-moz-font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
+	-ms-transform: border-box;
+    box-sizing: border-box;
 }
 
 /*------------------------------------*\
@@ -162,6 +71,7 @@
 @mixin box-shadow($horiz, $vert, $blur, $spread, $color){
   -webkit-box-shadow: $horiz $vert $blur $spread $color;
   -moz-box-shadow: $horiz $vert $blur $spread $color;
+  -ms-box-shadow: $horiz $vert $blur $spread $color;
   box-shadow: $horiz $vert $blur $spread $color;
 }
 
@@ -310,31 +220,7 @@
 @mixin animate($animation) {
     -webkit-animation: $animation;
     -moz-animation: $animation;
+    -ms-animation: $animation;
     -o-animation: $animation;
     animation: $animation;
-}
-
-/*------------------------------------*\
-    #VERTICAL ALIGN
-\*------------------------------------*/
-
-@mixin vertical-align($position) {
-  position: $position;
-  top: 50%;
-  left: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-/*------------------------------------*\
-    #HORIZONTAL ALIGN
-\*------------------------------------*/
-
-@mixin horizontal-align($position) {
-  position: $position;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }

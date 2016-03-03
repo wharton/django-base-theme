@@ -1,0 +1,49 @@
+/*****
+ * TABLE OF CONTENTS
+ *
+ * FONT FUNCTIONS 
+ *   - Rem to Px fallback
+ *   - Viewport to Rem to Px
+ *   - Font Smoothing
+ *
+ *****/
+
+/*------------------------------------*\
+    #REM to PIXEL FALLBACK
+\*------------------------------------*/
+   
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+/*------------------------------------*\
+    #Viewport to REM to PX fallback
+\*------------------------------------*/
+   
+@function get-vw($target) { 
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin vw($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+  font-size: get-vw($size);
+}
+
+/*------------------------------------*\
+    #FONT SMOOTHING
+\*------------------------------------*/
+
+@mixin smoothing {
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}

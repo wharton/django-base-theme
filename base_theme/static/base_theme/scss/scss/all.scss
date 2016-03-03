@@ -23,7 +23,10 @@
 
 @import 'helpers/fonts/font_families';
 @import 'helpers/fonts/font_colors';
-@import 'helpers/functions';
+@import 'helpers/fonts/font_functions';
+@import 'helpers/mixins';
+@import 'helpers/transforms';
+@import 'helpers/queries';
 @import 'helpers/flexbox';
 @import 'helpers/svg';
 

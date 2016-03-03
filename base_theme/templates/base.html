@@ -25,7 +25,7 @@
     {% endblock fast_fonts %}
     {% block extra_head_bottom %}{% endblock extra_head_bottom %}
 </head>
-<body>
+<body class="no-cls {% block body_class %}{% endblock body_class %}">
   <!--[if lte IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser.
       Please <a href="http://browsehappy.com/">upgrade your browser</a>
