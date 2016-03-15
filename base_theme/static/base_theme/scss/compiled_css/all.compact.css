@@ -2436,23 +2436,6 @@ button.close { -webkit-appearance: none; padding: 0; cursor: pointer; background
 
 /*------------------------------------*    #HELPERS
 \*------------------------------------*/
-/***** TABLE OF CONTENTS FONT FAMILIES (served via Fonts.com) - Palatino - Helvetica Neue Medium - Helvetica Neue Light - Helvetica Neue Ultra Light - Helvetica Neue Bold - Helvetica Neue Default - Helvetica Neue Roma */
-/***** TABLE OF CONTENTS FONT COLORS - Source: http://standards.wharton.upenn.edu/color - primary - secondary - accent - custom */
-/*------------------------------------*    #PRIMARY 
-\*------------------------------------*/
-/*------------------------------------*    #SECONDARY
-\*------------------------------------*/
-/*------------------------------------*    #ACCENT
-\*------------------------------------*/
-/*------------------------------------*    #CUSTOM
-\*------------------------------------*/
-/***** TABLE OF CONTENTS FONT FUNCTIONS  - Rem to Px fallback - Viewport to Rem to Px - Font Smoothing */
-/*------------------------------------*    #REM to PIXEL FALLBACK
-\*------------------------------------*/
-/*------------------------------------*    #Viewport to REM to PX fallback
-\*------------------------------------*/
-/*------------------------------------*    #FONT SMOOTHING
-\*------------------------------------*/
 /***** TABLE OF CONTENTS Cross browser opacity Border Radius Transitions Border-box Font-smoothing Box Shadow Gradient Bootstrap Glyphs Fontawesome Calculate Width Line height Absolute positioning Margin & Padding Aspect Ratio RGBA Background Animation */
 /*------------------------------------*    #CROSS-BROWSER OPACITY
 \*------------------------------------*/
@@ -2499,6 +2482,23 @@ button.close { -webkit-appearance: none; padding: 0; cursor: pointer; background
 /*------------------------------------*    #CUSTOM MAX
 \*------------------------------------*/
 /*------------------------------------*    #CUSTOM MIN & MAX
+\*------------------------------------*/
+/***** TABLE OF CONTENTS FONT FAMILIES (served via Fonts.com) - Palatino - Helvetica Neue Medium - Helvetica Neue Light - Helvetica Neue Ultra Light - Helvetica Neue Bold - Helvetica Neue Default - Helvetica Neue Roma */
+/***** TABLE OF CONTENTS FONT COLORS - Source: http://standards.wharton.upenn.edu/color - primary - secondary - accent - custom */
+/*------------------------------------*    #PRIMARY 
+\*------------------------------------*/
+/*------------------------------------*    #SECONDARY
+\*------------------------------------*/
+/*------------------------------------*    #ACCENT
+\*------------------------------------*/
+/*------------------------------------*    #CUSTOM
+\*------------------------------------*/
+/***** TABLE OF CONTENTS FONT FUNCTIONS  - Rem to Px fallback - Viewport to Rem to Px - Font Smoothing */
+/*------------------------------------*    #REM to PIXEL FALLBACK
+\*------------------------------------*/
+/*------------------------------------*    #Viewport to REM to PX fallback
+\*------------------------------------*/
+/*------------------------------------*    #FONT SMOOTHING
 \*------------------------------------*/
 /***** TABLE OF CONTENTS - Flexbox Functions - Flexbox - Values - Order - Direction - Align Item - Align Content - Justify - Flow */
 /*------------------------------------*    #Flexbox
