@@ -11,3 +11,13 @@ body {
 main#content {
   @include flex(1);
 }
+
+/** Flexbox is broken in (x) <= ie11 **/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    
+    body,
+    main#content {
+        display: block !important;
+    }
+       
+}
