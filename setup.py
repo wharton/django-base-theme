@@ -5,7 +5,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='base_theme',
-    version='1.0',
+    version='1.0.1',
     packages=['base_theme'],
     package_data={'base_theme': [
         'templates/*.html',
@@ -37,10 +37,7 @@ setup(
         'static/base_theme/scss/config.rb',
     ]},
     include_package_data=True,
-    install_requires=[
-        'django-fontawesome==0.2.2',
-        'django-bootstrap3',
-    ],
+    install_requires=[],
     license='BSD License',
     description="A responsive front-end boilerplate designed for Wharton Django/Python apps.",
     url='https://github.com/wharton/django-base-theme/',
